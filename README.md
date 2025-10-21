@@ -22,7 +22,6 @@ An AI-powered healthcare documentation system built for DeepScribe, featuring a 
 - **Unified Data Access**: Medical professionals can access patient-AI conversation histories for comprehensive care
 - **Intelligent Triage**: AI helps identify urgent cases and appropriate care levels
 - **Documentation Automation**: Automatic generation of clinical notes from patient interactions
-- **Privacy-First Design**: All interactions are encrypted and HIPAA-compliant
 
 ## 🛠️ Tech Stack
 
@@ -30,14 +29,12 @@ An AI-powered healthcare documentation system built for DeepScribe, featuring a 
 - **Next.js 14** - React framework for the web application
 - **TypeScript** - Type-safe JavaScript for robust development
 - **Tailwind CSS** - Utility-first CSS framework for styling
-- **Framer Motion** - Animation library for smooth user interactions
-- **Shadcn/UI** - Modern component library based on Radix UI
+
 
 ### Backend
 - **Python FastAPI** - High-performance API framework
 - **OpenAI API** - Advanced language model for intelligent responses
 - **SQLite/PostgreSQL** - Database for storing patient data and conversation histories
-- **JWT Authentication** - Secure token-based authentication
 - **Pydantic** - Data validation and serialization
 
 ### AI & Machine Learning
@@ -46,11 +43,7 @@ An AI-powered healthcare documentation system built for DeepScribe, featuring a 
 - **Conversation Memory** - Maintains context across patient interactions
 - **Medical Knowledge Base** - Integrated medical terminology and protocols
 
-### Security & Compliance
-- **HIPAA Compliance** - Built with healthcare data protection in mind
-- **End-to-End Encryption** - All patient data is encrypted in transit and at rest
-- **Role-Based Access Control** - Different access levels for patients vs. medical professionals
-- **Audit Logging** - Complete logs of all data access and modifications
+
 
 ## 📋 Prerequisites
 
@@ -94,6 +87,9 @@ healthcare-ai-chat/
 │   ├── chat.tsx          # Chat interface components
 │   ├── overview.tsx      # Landing page
 │   └── ui/               # Base UI components
+├── api/                   # FastAPI backend
+│   ├── index.py          # Main API router
+│   └── utils/            # Helper utilities and prompts
 ├── lib/                   # Shared utilities
 ├── hooks/                # React hooks
 └── .env                  # Environment variables (add your OPENAI_API_KEY here)

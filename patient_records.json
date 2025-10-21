@@ -1,0 +1,635 @@
+{
+  "patient_scribes": {
+    "jordan_carter": {
+      "encounter_id": "ENC-2025-10-20-001",
+      "timestamp": "2025-10-20T09:40:00-07:00",
+      "location": "Family Medicine, Mission Clinic",
+      "provider": { "name": "Andrew Lin, MD", "specialty": "Family Medicine" },
+      "patient": {
+        "mrn": "JC-045872",
+        "name": "Jordan Carter",
+        "dob": "1967-03-11",
+        "age": 58,
+        "sex": "M"
+      },
+      "chief_complaint": "Cough for ~3 weeks, worse at night.",
+      "vitals": {
+        "bp": "146/92",
+        "hr_bpm": 84,
+        "rr_bpm": 16,
+        "temp_f": 99.1,
+        "spo2_pct": 98,
+        "bmi": 29.4
+      },
+      "history": {
+        "hpi": "58-year-old man with 3-week predominantly dry cough worse at night and when supine; occasional clear morning sputum; mild exertional dyspnea on stairs; one night of low-grade fever. Increased nocturnal heartburn, especially after late meals. Began lisinopril ~2 months ago; cough started a few weeks later. Recent flight from Austin; grandson with URI. Tea and lozenges help.",
+        "pmh": ["Type 2 diabetes (2019)", "Hypertension (2025)"],
+        "medications_prior_to_visit": [
+          "metformin 1000 mg PO BID",
+          "lisinopril 10 mg PO QD (started ~2 months ago)"
+        ],
+        "allergies": ["No known drug allergies"],
+        "social_history": {
+          "occupation": "Sales",
+          "tobacco": "Never",
+          "alcohol": "2–3 drinks/week",
+          "exercise": "Walking (recently decreased)",
+          "home_support": "Lives with spouse; spouse available to help at home"
+        },
+        "family_history": ["Father CAD (MI at 62)", "Mother type 2 diabetes"]
+      },
+      "exam": {
+        "general": "Well-appearing, frequent dry cough",
+        "heent": "Oropharynx clear, no tonsillar exudate",
+        "lungs": "Clear to auscultation bilaterally; no wheezes/crackles",
+        "cardiac": "Regular rate and rhythm, no murmurs",
+        "extremities": "No edema"
+      },
+      "assessment": [
+        {
+          "problem": "Subacute cough",
+          "icd10": "R05.2",
+          "likely_etiologies": [
+            "ACE-inhibitor–associated cough (lisinopril)",
+            "Post-viral cough",
+            "GERD-related cough"
+          ],
+          "red_flags_present": false
+        },
+        {
+          "problem": "Essential hypertension",
+          "icd10": "I10",
+          "control": "Suboptimal on current regimen"
+        },
+        {
+          "problem": "Type 2 diabetes mellitus without complications",
+          "icd10": "E11.9",
+          "control_summary": "A1c 7.8% three months ago"
+        },
+        {
+          "problem": "Gastroesophageal reflux disease (suspected)",
+          "icd10": "K21.9"
+        }
+      ],
+      "plan": {
+        "medication_changes": [
+          { "stop": "lisinopril 10 mg PO QD" },
+          { "start": "losartan 50 mg PO QD" },
+          { "start": "benzonatate 100 mg PO TID PRN cough (max 200 mg TID)" },
+          { "start": "albuterol HFA 2 puffs q6h PRN wheeze/tightness" },
+          { "start": "famotidine 20 mg PO BID x 2–4 weeks" }
+        ],
+        "orders_today": ["Hemoglobin A1c", "Basic Metabolic Panel", "Lipid panel"],
+        "conditional_orders": [
+          "Chest X-ray if cough persists > 2 weeks after stopping ACE inhibitor or if new fever, chest pain, hemoptysis, or worsening dyspnea"
+        ],
+        "education": [
+          "Elevate head of bed",
+          "Avoid late meals; limit caffeine/alcohol at night",
+          "Hydration, honey, lozenges",
+          "Return precautions for red-flag symptoms"
+        ],
+        "follow_up": [
+          { "type": "Tele-visit", "when": "in 2 weeks", "purpose": "cough/BP and ARB tolerance review" },
+          { "type": "In-person", "when": "in 3 months", "purpose": "diabetes management" }
+        ],
+        "shared_decision_making": "Patient agrees to ACEi→ARB switch and to defer immediate CXR unless persistent symptoms."
+      },
+      "impact_on_function": {
+        "work": "Cough interrupts phone calls and presentations; worse with prolonged speaking at sales job.",
+        "sleep": "Nocturnal cough wakes patient when supine."
+      },
+      "self_care_and_remedies": {
+        "otc_used": ["Cough drops"],
+        "home_remedies": ["Hot tea with honey"],
+        "perceived_benefit": "Partial relief"
+      },
+      "exposures": {
+        "travel": "Commercial flight from Austin 3 weeks prior to visit",
+        "sick_contacts": ["Grandson with cold two weeks prior"]
+      },
+      "medication_side_effects_and_concerns": {
+        "ace_inhibitor_cough_suspected": true,
+        "patient_concerns": "Open to switching medications to resolve cough",
+        "adherence_prior": "Reports taking metformin and lisinopril as prescribed"
+      },
+      "adherence_and_acceptance": {
+        "agreed_to_plan": true,
+        "declined_any_treatments": false,
+        "notes": "Agreed to ARB switch, PRN meds, GERD measures, and follow-ups."
+      },
+      "transcript": [
+        { "t": "00:00", "speaker": "Provider", "text": "Hi Jordan, what brings you in today?" },
+        { "t": "00:02", "speaker": "Patient", "text": "I’ve had a cough for about three weeks. It’s worse at night and when I talk a lot." },
+        { "t": "00:35", "speaker": "Provider", "text": "Any fever, shortness of breath, chest pain, or coughing up blood?" },
+        { "t": "00:38", "speaker": "Patient", "text": "No blood. I sometimes feel a little short of breath walking up stairs, but no chest pain. I had one night of a low-grade fever last week, like ninety-nine-ish." },
+        { "t": "01:05", "speaker": "Provider", "text": "Is the cough dry or with phlegm? Any color?" },
+        { "t": "01:08", "speaker": "Patient", "text": "Mostly dry. Occasionally a little clear mucus in the morning." },
+        { "t": "01:25", "speaker": "Provider", "text": "Any sick contacts or recent travel?" },
+        { "t": "01:27", "speaker": "Patient", "text": "My grandson had a cold two weeks ago. I flew back from Austin three weeks ago." },
+        { "t": "01:45", "speaker": "Provider", "text": "What makes it better or worse?" },
+        { "t": "01:47", "speaker": "Patient", "text": "Lying down makes it worse. Hot tea helps. I tried some over-the-counter cough drops." },
+        { "t": "02:05", "speaker": "Provider", "text": "Do you get heartburn or a sour taste at night?" },
+        { "t": "02:07", "speaker": "Patient", "text": "Yeah, more heartburn lately, especially if I eat late." },
+        { "t": "02:25", "speaker": "Provider", "text": "You’re on metformin 1000 mg twice daily and lisinopril 10 mg daily, correct?" },
+        { "t": "02:27", "speaker": "Patient", "text": "Yes. I started lisinopril about two months ago." },
+        { "t": "02:45", "speaker": "Provider", "text": "Some people get a dry cough from lisinopril. Did your cough start after you began it?" },
+        { "t": "02:48", "speaker": "Patient", "text": "I think the cough started a few weeks after I began the lisinopril. I didn’t connect the dots." },
+        { "t": "03:10", "speaker": "Provider", "text": "Any history of asthma, allergies, or smoking?" },
+        { "t": "03:12", "speaker": "Patient", "text": "No asthma and I don’t smoke. I only get seasonal allergies in the spring." },
+        { "t": "03:25", "speaker": "Provider", "text": "How is home—do you have support if you feel worse?" },
+        { "t": "03:27", "speaker": "Patient", "text": "I live with my wife. She can help out if needed." },
+        { "t": "03:30", "speaker": "Provider", "text": "Any swelling in your legs, unintentional weight loss, or night sweats?" },
+        { "t": "03:32", "speaker": "Patient", "text": "None of those." },
+        { "t": "03:45", "speaker": "Provider", "text": "How is your diabetes control? Any home glucose readings?" },
+        { "t": "03:47", "speaker": "Patient", "text": "Fasting numbers are around 130 to 150. I haven’t been walking as much since traveling." },
+        { "t": "04:05", "speaker": "Provider", "text": "I’ll check your vitals and listen to your lungs." },
+        { "t": "05:00", "speaker": "Provider", "text": "Your lungs sound clear, oxygen is good. This is most likely a subacute cough—post-viral, reflux-related, or from lisinopril." },
+        { "t": "05:15", "speaker": "Patient", "text": "What should we do?" },
+        { "t": "05:45", "speaker": "Provider", "text": "Let’s stop lisinopril and switch to losartan. I’ll prescribe benzonatate for cough and an albuterol inhaler if you feel tightness. Try elevating the head of your bed and avoid late meals. If it doesn’t improve, we’ll get a chest X-ray." },
+        { "t": "06:00", "speaker": "Patient", "text": "Sounds good to me." },
+        { "t": "06:10", "speaker": "Provider", "text": "Any concerns about medications or side effects?" },
+        { "t": "06:12", "speaker": "Patient", "text": "No, I just want this cough gone. I’m fine switching meds." },
+        { "t": "06:18", "speaker": "Provider", "text": "Is the cough affecting work or sleep?" },
+        { "t": "06:20", "speaker": "Patient", "text": "Yes—on sales calls it makes me pause a lot, and at night it wakes me when I lie flat." },
+        { "t": "06:25", "speaker": "Provider", "text": "I’ll also order labs today for diabetes and to monitor the new blood pressure medicine. We’ll schedule a follow-up in two weeks. If you get a high fever, chest pain, or cough up blood, call immediately." },
+        { "t": "06:35", "speaker": "Patient", "text": "Will do. Thanks, doctor." }
+      ],
+      "example_queries_answers": {
+        "how_long_symptoms": {
+          "answer": "Approximately 3 weeks.",
+          "evidence": [{ "t": "00:02", "speaker": "Patient", "text": "I’ve had a cough for about three weeks." }]
+        },
+        "triggers": {
+          "answer": "Worse at night and when supine; worse with prolonged talking; reflux/late meals aggravate; improved with hot tea.",
+          "evidence": [
+            { "t": "00:02", "text": "worse at night and when I talk a lot" },
+            { "t": "01:47", "text": "Lying down makes it worse. Hot tea helps." },
+            { "t": "02:07", "text": "More heartburn lately, especially if I eat late." }
+          ]
+        },
+        "course_worse_or_same": {
+          "answer": "Persistent over 3 weeks; not escalating; one night of low-grade fever; mild exertional dyspnea only.",
+          "evidence": [
+            { "t": "00:38", "text": "one night of a low-grade fever" },
+            { "t": "00:38", "text": "a little short of breath walking up stairs" }
+          ]
+        },
+        "recent_travel_or_exposures": {
+          "answer": "Flight from Austin 3 weeks prior; sick contact with grandson who had a cold 2 weeks prior.",
+          "evidence": [{ "t": "01:27", "text": "grandson had a cold... flew back from Austin" }]
+        },
+        "medication_concerns_side_effects": {
+          "answer": "ACE-inhibitor cough suspected from lisinopril started ~2 months prior; patient agrees to switch to losartan.",
+          "evidence": [
+            { "t": "02:45", "text": "Some people get a dry cough from lisinopril." },
+            { "t": "02:48", "text": "cough started a few weeks after I began the lisinopril" },
+            { "t": "06:12", "text": "I’m fine switching meds." }
+          ]
+        },
+        "home_support_system": {
+          "answer": "Lives with spouse; has support at home.",
+          "evidence": [{ "t": "03:27", "text": "I live with my wife. She can help out if needed." }]
+        },
+        "otc_or_home_remedies": {
+          "answer": "Tried OTC cough drops; drinks hot tea which helps.",
+          "evidence": [{ "t": "01:47", "text": "Hot tea helps. I tried some over-the-counter cough drops." }]
+        },
+        "need_follow_up": {
+          "answer": "Yes — tele-visit in 2 weeks to reassess cough and blood pressure/ARB tolerance; 3-month diabetes follow-up.",
+          "evidence": [{ "t": "06:25", "text": "We’ll schedule a follow-up in two weeks." }]
+        },
+        "tests_to_order": {
+          "answer": "A1c, BMP, and lipid panel today; chest X-ray if cough persists >2 weeks after stopping ACE inhibitor or if red flags develop.",
+          "evidence": [{ "t": "06:25", "text": "order labs today... If it doesn’t improve, we’ll get a chest X-ray." }]
+        },
+        "symptoms_affecting_daily_life_or_work": {
+          "answer": "Cough interrupts sales calls and disrupts sleep when supine.",
+          "evidence": [{ "t": "06:20", "text": "on sales calls it makes me pause... at night it wakes me" }]
+        },
+        "is_patient_following_plan": {
+          "answer": "Patient agrees to medication switch and lifestyle measures; understands PRN meds and return precautions.",
+          "evidence": [
+            { "t": "06:00", "text": "Sounds good to me." },
+            { "t": "06:35", "text": "Will do. Thanks, doctor." }
+          ]
+        },
+        "declined_any_treatments": {
+          "answer": "No — patient did not decline any treatments; agreed to defer immediate CXR unless persistent symptoms.",
+          "evidence": [
+            { "t": "05:45", "text": "If it doesn’t improve, we’ll get a chest X-ray." },
+            { "t": "06:00", "text": "Sounds good to me." }
+          ]
+        }
+      }
+    },
+    "rebecca_martinez": {
+      "encounter_id": "ENC-2025-10-21-002",
+      "timestamp": "2025-10-21T14:15:00-07:00",
+      "location": "Orthopedics, Mission Clinic",
+      "provider": { "name": "Sarah Martinez, MD", "specialty": "Orthopedic Surgery" },
+      "patient": {
+        "mrn": "RM-032641",
+        "name": "Rebecca Martinez",
+        "dob": "1972-07-18",
+        "age": 52,
+        "sex": "F"
+      },
+      "chief_complaint": "Right knee pain and swelling for 2 weeks.",
+      "vitals": {
+        "bp": "132/84",
+        "hr_bpm": 78,
+        "rr_bpm": 14,
+        "temp_f": 98.6,
+        "spo2_pct": 99,
+        "bmi": 27.1
+      },
+      "history": {
+        "hpi": "52-year-old woman with 2-week history of progressive right knee pain and swelling; acute onset after stepping awkwardly while gardening. Pain is anterior and medial, worse with stairs, squatting, and prolonged standing; improved with rest and ice. No locking or giving way. Mild morning stiffness that improves with activity. No trauma or prior knee injury; has osteoarthritis in left knee (diagnosed 3 years ago). Recently increased gardening and yard work intensity.",
+        "pmh": ["Osteoarthritis, left knee (2022)", "Hypertension (2018)", "Hyperlipidemia (2020)"],
+        "medications_prior_to_visit": [
+          "lisinopril 10 mg PO QD",
+          "atorvastatin 20 mg PO QD",
+          "ibuprofen 400 mg PO PRN pain (several times weekly)"
+        ],
+        "allergies": ["Penicillin (rash)"],
+        "social_history": {
+          "occupation": "Landscape designer",
+          "tobacco": "Never",
+          "alcohol": "1–2 drinks/week",
+          "exercise": "Hiking, gardening (recently increased)",
+          "home_support": "Lives with spouse and adult daughter; supportive family"
+        },
+        "family_history": ["Mother osteoarthritis (knees, hips)", "Father hypertension"]
+      },
+      "exam": {
+        "general": "Alert, appears comfortable at rest; pain with movement",
+        "heent": "Unremarkable",
+        "lungs": "Clear to auscultation bilaterally",
+        "cardiac": "Regular rate and rhythm",
+        "extremities": "Right knee: moderate effusion, warmth, and tenderness over medial joint line; positive McMurray's test; no ligamentous laxity; full ROM painful; left knee: chronic changes without acute swelling; bilateral feet/ankles unremarkable"
+      },
+      "assessment": [
+        {
+          "problem": "Right knee pain with effusion",
+          "icd10": "M25.561",
+          "likely_etiologies": [
+            "Medial meniscal strain or tear",
+            "Early osteoarthritic flare",
+            "Synovitis"
+          ],
+          "red_flags_present": false
+        },
+        {
+          "problem": "Essential hypertension",
+          "icd10": "I10",
+          "control": "Well-controlled on current regimen"
+        },
+        {
+          "problem": "Hyperlipidemia",
+          "icd10": "E78.5",
+          "control": "At goal on current regimen"
+        },
+        {
+          "problem": "Osteoarthritis, bilateral knees",
+          "icd10": "M17.11",
+          "severity": "Mild to moderate"
+        }
+      ],
+      "plan": {
+        "medication_changes": [
+          { "continue": "lisinopril 10 mg PO QD" },
+          { "continue": "atorvastatin 20 mg PO QD" },
+          { "start": "meloxicam 15 mg PO QD x 2 weeks then reassess" },
+          { "start": "cyclobenzaprine 5 mg PO QHS PRN muscle tightness" }
+        ],
+        "orders_today": ["Right knee MRI", "Basic Metabolic Panel"],
+        "conditional_orders": [
+          "Orthopedic surgery referral if MRI shows significant meniscal tear or ligamentous injury"
+        ],
+        "education": [
+          "RICE protocol: rest, ice (15 min q4-6h), compression, elevation",
+          "Activity modification: avoid stairs/squatting for 1 week; resume gradually",
+          "Physical therapy referral for strengthening and ROM",
+          "Weight management counseling if indicated",
+          "Return precautions: worsening swelling, signs of infection, or persistent locked knee"
+        ],
+        "follow_up": [
+          { "type": "Phone/In-person", "when": "after MRI results (3–5 days)", "purpose": "review imaging, reassess need for surgery" },
+          { "type": "In-person", "when": "in 2 weeks", "purpose": "assess response to anti-inflammatory therapy and PT" }
+        ],
+        "shared_decision_making": "Patient agrees to conservative management with imaging and PT first; open to surgery if imaging reveals significant tear and conservative measures fail."
+      },
+      "impact_on_function": {
+        "work": "Unable to do fieldwork or site visits; limited to office design work temporarily.",
+        "activities": "Cannot hike, garden, or go up stairs without significant pain; sleep mildly disrupted by discomfort when turning.",
+        "daily_living": "Difficulty with household chores; moving around home requires caution and slow pace."
+      },
+      "self_care_and_remedies": {
+        "otc_used": ["Ibuprofen 400 mg", "Topical diclofenac gel"],
+        "home_remedies": ["Ice packs 3–4 times daily", "Elevation on pillow", "Compression sleeve"],
+        "perceived_benefit": "Temporary relief with ice and rest; pain returns with activity"
+      },
+      "exposures": {
+        "recent_activities": "Increased gardening and yard work over past month; stepped awkwardly while carrying mulch",
+        "mechanical_factors": "Repetitive squatting and kneeling for landscaping work"
+      },
+      "medication_side_effects_and_concerns": {
+        "nsaid_use_prolonged": true,
+        "patient_concerns": "Concerned about frequent ibuprofen use; prefers to avoid long-term NSAIDs; interested in physical therapy",
+        "adherence_prior": "Adherent with chronic meds; uses NSAIDs as needed without tracking frequency"
+      },
+      "adherence_and_acceptance": {
+        "agreed_to_plan": true,
+        "declined_any_treatments": false,
+        "notes": "Patient receptive to conservative approach with PT; willing to try meloxicam for limited duration; interested in preventive strategies."
+      },
+      "transcript": [
+        { "t": "00:00", "speaker": "Provider", "text": "Hi Rebecca, I see you're having some right knee trouble. Tell me what happened." },
+        { "t": "00:03", "speaker": "Patient", "text": "Yeah, about two weeks ago I twisted my knee while gardening. I stepped wrong carrying a heavy mulch bag. It's been swollen and painful ever since." },
+        { "t": "00:25", "speaker": "Provider", "text": "Was there a popping sound or sensation at the time?" },
+        { "t": "00:27", "speaker": "Patient", "text": "I didn't hear anything pop, but it did hurt sharply in that moment. The pain settled into a dull ache, but the swelling got worse over the next few days." },
+        { "t": "00:50", "speaker": "Provider", "text": "Have you had any episodes of your knee giving way or locking?" },
+        { "t": "00:53", "speaker": "Patient", "text": "No locking or giving way, thank goodness. Just pain and swelling." },
+        { "t": "01:10", "speaker": "Provider", "text": "Any prior knee injuries or problems?" },
+        { "t": "01:12", "speaker": "Patient", "text": "My left knee has arthritis—I was diagnosed a few years ago. But the right knee was fine until this." },
+        { "t": "01:35", "speaker": "Provider", "text": "What makes the pain better or worse?" },
+        { "t": "01:37", "speaker": "Patient", "text": "Resting and ice help a lot. But stairs, squatting, and even standing for long periods makes it worse. I've basically been avoiding my landscaping work." },
+        { "t": "02:05", "speaker": "Provider", "text": "Any redness, warmth, or signs of infection in the knee?" },
+        { "t": "02:07", "speaker": "Patient", "text": "It's a bit warm and red around the swelling, but I don't think it's infected. It doesn't feel like a fever or anything." },
+        { "t": "02:30", "speaker": "Provider", "text": "Are you on any regular medications?" },
+        { "t": "02:32", "speaker": "Patient", "text": "Yes, lisinopril for blood pressure and atorvastatin for cholesterol. I also take ibuprofen fairly often for aches—maybe several times a week, especially when I'm gardening a lot." },
+        { "t": "02:55", "speaker": "Provider", "text": "I'm going to examine your knee now and check your range of motion." },
+        { "t": "04:00", "speaker": "Provider", "text": "I can feel the swelling and some tenderness along the inside of your knee joint. Your McMurray's test is positive, which suggests possible meniscal involvement, but I need imaging to be sure." },
+        { "t": "04:15", "speaker": "Patient", "text": "Does that mean I need surgery?" },
+        { "t": "04:30", "speaker": "Provider", "text": "Let's see what the MRI shows first. Many meniscal issues respond well to conservative treatment—rest, anti-inflammatory medication, and physical therapy. If imaging shows a significant tear and conservative measures don't help, then we'd consider other options." },
+        { "t": "04:50", "speaker": "Patient", "text": "That sounds reasonable. I'd prefer to avoid surgery if possible." },
+        { "t": "05:10", "speaker": "Provider", "text": "I'll order an MRI. For now, follow RICE—rest, ice every 4 to 6 hours for 15 minutes, compression, and elevation. Avoid stairs and squatting for about a week. I'll start you on meloxicam, an anti-inflammatory, to help reduce the swelling." },
+        { "t": "05:40", "speaker": "Patient", "text": "How long do I need to take the meloxicam?" },
+        { "t": "05:42", "speaker": "Provider", "text": "I'd suggest about 2 weeks, then we reassess. If you're feeling better, we can taper it down. I'm also going to refer you to physical therapy—that will be crucial for regaining strength and range of motion." },
+        { "t": "06:05", "speaker": "Patient", "text": "Okay, and what about my work? I do landscaping, so I'm on my feet a lot." },
+        { "t": "06:07", "speaker": "Provider", "text": "You'll need to limit fieldwork for at least a week or two. Focus on office-based design work if possible. As you improve, you can gradually return to more activity. PT will help guide that." },
+        { "t": "06:30", "speaker": "Patient", "text": "All right. What if the MRI shows something serious?" },
+        { "t": "06:32", "speaker": "Provider", "text": "We'll discuss all options then, including surgical consultation if needed. But let's take this step by step. I'll call you once I have the MRI results—should be within a few days." },
+        { "t": "06:50", "speaker": "Patient", "text": "Thanks, doctor. I appreciate the thorough approach." },
+        { "t": "06:52", "speaker": "Provider", "text": "You're welcome. Keep that knee elevated and iced. We'll be in touch soon." }
+      ],
+      "example_queries_answers": {
+        "how_long_symptoms": {
+          "answer": "Approximately 2 weeks.",
+          "evidence": [{ "t": "00:03", "speaker": "Patient", "text": "about two weeks ago I twisted my knee" }]
+        },
+        "injury_mechanism": {
+          "answer": "Stepped awkwardly while carrying a heavy mulch bag while gardening.",
+          "evidence": [{ "t": "00:03", "text": "I stepped wrong carrying a heavy mulch bag" }]
+        },
+        "triggers": {
+          "answer": "Stairs, squatting, prolonged standing; improved with rest and ice.",
+          "evidence": [
+            { "t": "01:37", "text": "stairs, squatting, and even standing for long periods makes it worse" },
+            { "t": "01:37", "text": "Resting and ice help a lot" }
+          ]
+        },
+        "prior_knee_history": {
+          "answer": "Left knee osteoarthritis diagnosed 3 years ago; right knee previously unaffected.",
+          "evidence": [{ "t": "01:12", "text": "My left knee has arthritis... But the right knee was fine until this" }]
+        },
+        "red_flags_absent": {
+          "answer": "No locking, giving way, fever, or signs of infection.",
+          "evidence": [
+            { "t": "00:53", "text": "No locking or giving way" },
+            { "t": "02:07", "text": "doesn't feel like a fever or anything" }
+          ]
+        },
+        "medication_concerns": {
+          "answer": "Patient concerned about frequent ibuprofen use; prefers to avoid long-term NSAIDs.",
+          "evidence": [{ "t": "02:32", "text": "I take ibuprofen fairly often... maybe several times a week" }]
+        },
+        "home_support": {
+          "answer": "Lives with spouse and adult daughter; supportive family.",
+          "evidence": [{ "t": "01:00", "speaker": "Provider", "text": "[from history] Lives with spouse and adult daughter" }]
+        },
+        "work_impact": {
+          "answer": "Unable to perform fieldwork or site visits due to pain and swelling; limited to office design work.",
+          "evidence": [{ "t": "06:05", "text": "I do landscaping, so I'm on my feet a lot" }]
+        },
+        "imaging_plan": {
+          "answer": "MRI ordered to assess for meniscal tear and other structural injury; orthopedic surgery referral if significant pathology found.",
+          "evidence": [{ "t": "06:32", "text": "We'll discuss all options... including surgical consultation if needed" }]
+        },
+        "treatment_preference": {
+          "answer": "Patient prefers conservative management initially; open to surgery if imaging shows significant tear and conservative therapy fails.",
+          "evidence": [
+            { "t": "04:50", "text": "I'd prefer to avoid surgery if possible" },
+            { "t": "06:32", "text": "take this step by step" }
+          ]
+        },
+        "is_patient_following_plan": {
+          "answer": "Patient agrees to RICE protocol, anti-inflammatory medication, activity modification, and physical therapy.",
+          "evidence": [
+            { "t": "04:50", "text": "That sounds reasonable" },
+            { "t": "06:52", "text": "Thanks, doctor. I appreciate the thorough approach." }
+          ]
+        }
+      }
+    },
+    "emily_chen": {
+      "encounter_id": "ENC-2025-10-21-003",
+      "timestamp": "2025-10-21T11:30:00-07:00",
+      "location": "Internal Medicine, Mission Clinic",
+      "provider": { "name": "Dr. James Morrison, MD", "specialty": "Internal Medicine" },
+      "patient": {
+        "mrn": "EC-028451",
+        "name": "Emily Chen",
+        "dob": "1990-05-15",
+        "age": 34,
+        "sex": "F"
+      },
+      "chief_complaint": "Fever and chills for 2 weeks, occurring in cycles."
+    },
+    "vitals": {
+      "bp": "118/76",
+      "hr_bpm": 102,
+      "rr_bpm": 18,
+      "temp_f": 103.4,
+      "spo2_pct": 97,
+      "bmi": 23.1
+    },
+    "history": {
+      "hpi": "34-year-old woman presenting with 2-week history of high fever (101–104°F) occurring in cycles every 48-72 hours, accompanied by severe chills, profuse diaphoresis, and muscle/joint pain. Fever pattern is remittent. Patient reports severe fatigue, malaise, and mild abdominal discomfort. Returned from 3-week trip to Tanzania 2 weeks ago (visited Dar es Salaam and rural areas); no antimalarial prophylaxis taken. No respiratory symptoms, no diarrhea. Denies recent sick contacts. Reports insect bites during travel, particularly mosquitoes at dawn/dusk. No medical interventions or over-the-counter medications taken; symptoms began gradually after return.",
+      "pmh": [],
+      "medications_prior_to_visit": [],
+      "allergies": ["No known drug allergies"],
+      "social_history": {
+        "occupation": "Travel photographer",
+        "tobacco": "Never",
+        "alcohol": "Social drinker",
+        "exercise": "Regular (yoga, hiking)",
+        "home_support": "Lives alone; no dependents"
+      },
+      "family_history": ["No significant family history"]
+    },
+    "exam": {
+      "general": "Alert but appearing ill; currently febrile and diaphoretic",
+      "heent": "Icteric sclera noted; no lymphadenopathy; oropharynx clear",
+      "lungs": "Clear to auscultation bilaterally",
+      "cardiac": "Tachycardic at 102 bpm, regular rhythm, no murmurs",
+      "abdomen": "Soft, mildly tender in RUQ; hepatosplenomegaly noted (liver edge 2 cm below costal margin, spleen palpable at costal margin)",
+      "extremities": "No edema; no rash; petechiae absent",
+      "neuro": "Alert and oriented; normal motor and sensory exam"
+    },
+    "assessment": [
+      {
+        "problem": "Fever of unknown origin with cyclic pattern",
+        "icd10": "R50.9",
+        "likely_etiologies": [
+          "Malaria (P. falciparum, P. vivax, P. ovale, or P. malariae given 48-72 hour fever cycle and travel to endemic region)",
+          "Dengue fever (travel history, fever pattern, malaise)",
+          "Typhoid fever (gradual onset, malaise, abdominal tenderness, hepatosplenomegaly)",
+          "Q fever or other zoonotic infection",
+          "Tuberculosis (subacute presentation, fatigue)"
+        ],
+        "red_flags_present": false,
+        "concern": "Cyclic fever after travel to malaria-endemic area is highly concerning for malaria; hepatosplenomegaly supports tropical infection"
+      },
+      {
+        "problem": "Hepatosplenomegaly",
+        "icd10": "R16.2",
+        "context": "Consistent with malaria, dengue, typhoid, or tuberculosis"
+      },
+      {
+        "problem": "Jaundice (icterus)",
+        "icd10": "R17",
+        "context": "Suggests hemolysis or liver involvement; concerning for severe malaria with hemolytic anemia"
+      }
+    ],
+    "plan": {
+      "diagnostic_workup": [
+        "Thick and thin blood smears for malaria parasites (URGENT - repeat x3 if initial negative)",
+        "Rapid diagnostic test (RDT) for malaria antigens (P. falciparum, P. vivax)",
+        "Complete blood count with differential (assess for anemia, thrombocytopenia, leukocytosis)",
+        "Liver function tests (AST, ALT, bilirubin, albumin)",
+        "Renal function (creatinine, BUN) to assess for acute kidney injury",
+        "Blood cultures x2 (rule out bacteremia, endocarditis, typhoid)",
+        "Dengue serology (IgM/IgG); consider dengue PCR",
+        "Typhoid serology and blood culture on selective media",
+        "Lactate level (assess for severe malaria)"
+      ],
+      "empiric_treatment": [
+        "Hold antimalarials pending diagnostic confirmation; patient counseled about wait-and-see approach",
+        "Supportive care: acetaminophen for fever/myalgias; encourage fluid intake",
+        "Monitor closely for warning signs of severe malaria: altered mental status, seizures, severe anemia, renal failure"
+      ],
+      "orders_today": [
+        "STAT: Thick/thin blood smears (malaria)",
+        "STAT: Rapid malaria diagnostic test",
+        "STAT: CBC with differential, comprehensive metabolic panel, LFTs",
+        "Blood cultures x2",
+        "Dengue and typhoid serologies"
+      ],
+      "education": [
+        "Explained cyclic fever pattern and malaria risk after travel",
+        "Discussed importance of rapid diagnosis given travel history",
+        "Return precautions: severe headache, confusion, difficulty breathing, severe abdominal pain, dark urine, or seizures → ER immediately"
+      ],
+      "follow_up": [
+        { "type": "Phone", "when": "Same day once labs result", "purpose": "Discuss diagnostic findings and start treatment if malaria confirmed" },
+        { "type": "In-person", "when": "In 24-48 hours", "purpose": "Repeat blood smears if initial negative and fever persists; reassess treatment response" }
+      ],
+      "shared_decision_making": "Patient understands need for urgent labs to identify cause. Agreed not to start empiric antimalarials until confirmation given diagnostic uncertainty. Will follow up emergently if symptoms worsen."
+    },
+    "impact_on_function": {
+      "work": "Unable to work; too ill; called in sick to photography assignments",
+      "activities": "Confined to bed during fever episodes; significant malaise between cycles",
+      "daily_living": "Severe fatigue making basic self-care difficult"
+    },
+    "self_care_and_remedies": {
+      "otc_used": ["Minimal; used acetaminophen once but avoided others"],
+      "home_remedies": ["Rest, fluids"],
+      "perceived_benefit": "Minimal relief"
+    },
+    "exposures": {
+      "travel": "3-week trip to Tanzania (Dar es Salaam, rural Morogoro region) 2 weeks ago",
+      "mosquito_exposure": "Significant exposure to mosquitoes, particularly at dawn/dusk in rural areas; no mosquito net used consistently",
+      "prophylaxis": "No antimalarial prophylaxis taken before or during trip",
+      "food_water": "Ate local food and drinks; water source varied (some from tap, some bottled)"
+    },
+    "medication_side_effects_and_concerns": {
+      "previous_meds": "None; first hospitalization/clinical presentation",
+      "allergies_confirmed": "NKDA",
+      "antibiotic_sensitivities": "Unknown; no prior cultures"
+    },
+    "adherence_and_acceptance": {
+      "agreed_to_plan": true,
+      "declined_any_treatments": false,
+      "notes": "Patient very receptive to workup; anxious about diagnosis given travel history; understands urgency"
+    },
+    "transcript": [
+      { "t": "00:00", "speaker": "Provider", "text": "Hi Emily, I see you've been having fevers for about 2 weeks. Tell me what's been going on." },
+      { "t": "00:05", "speaker": "Patient", "text": "Yes, it started right after I got back from Tanzania. I was there for 3 weeks, traveling around, taking photos. At first I thought it was jet lag, but then the fever started and it just won't stop." },
+      { "t": "00:35", "speaker": "Provider", "text": "Is the fever constant, or does it come and go?" },
+      { "t": "00:38", "speaker": "Patient", "text": "It comes and goes. Every couple of days I get this incredibly high fever—like 103, 104—and I get these violent chills and start sweating through my clothes. Then after a few hours it breaks and I feel almost normal for a while. But then it comes back." },
+      { "t": "01:10", "speaker": "Provider", "text": "Any other symptoms with the fevers?" },
+      { "t": "01:15", "speaker": "Patient", "text": "My muscles and joints ache so badly. My whole body hurts. And I'm exhausted—like, I can barely get out of bed. My stomach's been bothering me a bit too, kind of achy in the upper right area." },
+      { "t": "01:45", "speaker": "Provider", "text": "Any cough, sore throat, or difficulty breathing?" },
+      { "t": "01:48", "speaker": "Patient", "text": "No, nothing like that. Just the fever, chills, body aches, and this overwhelming tiredness." },
+      { "t": "02:10", "speaker": "Provider", "text": "Where exactly did you travel in Tanzania?" },
+      { "t": "02:15", "speaker": "Patient", "text": "Mainly around Dar es Salaam for the first week, then I went inland to Morogoro region to photograph wildlife and landscapes. Smaller towns, rural areas. I was there when mosquitoes are most active—dawn and dusk." },
+      { "t": "02:45", "speaker": "Provider", "text": "Did you take any antimalarial medications?" },
+      { "t": "02:48", "speaker": "Patient", "text": "No, I didn't. I didn't think to get them before the trip, and by the time I realized I should have, I was already going. I did get bitten by mosquitoes a lot, especially in the evenings. I didn't always have a mosquito net." },
+      { "t": "03:15", "speaker": "Provider", "text": "Any yellow discoloration to your skin or eyes that you've noticed?" },
+      { "t": "03:18", "speaker": "Patient", "text": "Actually, now that you mention it, my mom said my eyes looked a bit yellow yesterday. I thought maybe I was just tired." },
+      { "t": "03:40", "speaker": "Provider", "text": "Have you had any rash, spots, or bleeding?" },
+      { "t": "03:42", "speaker": "Patient", "text": "No rash, no bleeding. Just feeling really sick." },
+      { "t": "04:00", "speaker": "Provider", "text": "Let me examine you and check some things. I'm going to feel your belly." },
+      { "t": "05:00", "speaker": "Provider", "text": "Emily, I can feel your liver and spleen are enlarged, and your eyes do appear icteric—yellowish. Given your travel to Tanzania, the cyclic fever pattern, and these findings, we need to rule out malaria and other tropical infections urgently." },
+      { "t": "05:20", "speaker": "Patient", "text": "Malaria? Oh my god. Is that serious?" },
+      { "t": "05:30", "speaker": "Provider", "text": "Malaria can be serious if not treated, which is why we need to diagnose it quickly. But many cases respond very well to treatment. I'm going to order blood tests right away—blood smears to look for the malaria parasite under the microscope, and other tests to help us understand what's going on." },
+      { "t": "05:50", "speaker": "Patient", "text": "How quickly will we know?" },
+      { "t": "05:55", "speaker": "Provider", "text": "The blood smear can be done urgently, often within hours. We should have preliminary results today. If the first test is negative but your fever continues, we'll repeat it—sometimes the parasite can be hard to find on the first try." },
+      { "t": "06:10", "speaker": "Patient", "text": "And if it is malaria, what then?" },
+      { "t": "06:15", "speaker": "Provider", "text": "We have very effective antimalarial medications. The type of medication depends on which type of malaria parasite you have, so the blood smear will help us know. Once we confirm the diagnosis, we'll start treatment, and most people recover fully." },
+      { "t": "06:35", "speaker": "Patient", "text": "Okay. I'm scared, but I'm glad I came in. What do I do in the meantime?" },
+      { "t": "06:40", "speaker": "Provider", "text": "Rest, drink plenty of fluids, and take acetaminophen for the fever and body aches. If you develop confusion, severe headache, difficulty breathing, or very dark urine, go to the ER immediately. We'll call you as soon as the results are back." },
+      { "t": "06:50", "speaker": "Patient", "text": "Thank you, doctor." }
+    ],
+    "example_queries_answers": {
+      "how_long_symptoms": {
+        "answer": "Exactly 2 weeks; started after returning from Tanzania",
+        "evidence": [{ "t": "00:05", "speaker": "Patient", "text": "started right after I got back from Tanzania... 3 weeks ago" }]
+      },
+      "fever_pattern": {
+        "answer": "Cyclic remittent fever; high (103-104°F) every 2-3 days with violent chills, followed by period of relative wellness; strongly suggests malaria",
+        "evidence": [{ "t": "00:38", "speaker": "Patient", "text": "comes and goes... Every couple of days... 103, 104... violent chills... then it breaks and I feel almost normal" }]
+      },
+      "associated_symptoms": {
+        "answer": "Severe myalgias, arthralgias, profound fatigue, upper right abdominal tenderness, jaundice",
+        "evidence": [
+          { "t": "01:15", "speaker": "Patient", "text": "muscles and joints ache so badly... exhausted" },
+          { "t": "03:18", "speaker": "Patient", "text": "my eyes looked a bit yellow" }
+        ]
+      },
+      "travel_and_exposure": {
+        "answer": "Travel to Tanzania (Dar es Salaam and rural Morogoro region) 3 weeks ago; significant mosquito exposure at dawn/dusk; no antimalarial prophylaxis; no mosquito net used consistently",
+        "evidence": [{ "t": "02:15", "speaker": "Patient", "text": "Dar es Salaam... Morogoro region... mosquitoes most active... didn't always have a mosquito net" }]
+      },
+      "malaria_suspicion_level": {
+        "answer": "Very high—cyclic fever pattern after travel to endemic region is pathognomonic for malaria; hepatosplenomegaly and jaundice confirm systemic infection",
+        "evidence": [{ "t": "05:30", "speaker": "Provider", "text": "travel to Tanzania, the cyclic fever pattern, and these findings, we need to rule out malaria" }]
+      },
+      "alternative_diagnoses": {
+        "answer": "Dengue fever, typhoid fever, Q fever, or other tropical infections; but malaria is highest on differential given pattern and travel",
+        "evidence": [{ "t": "05:00", "speaker": "Provider", "text": "rule out malaria and other tropical infections" }]
+      },
+      "prior_medical_history": {
+        "answer": "No prior medical history; no medications; first acute illness presentation",
+        "evidence": [{ "t": "00:00", "text": "Patient has no PMH; first presentation" }]
+      },
+      "diagnostic_plan": {
+        "answer": "STAT blood smears (thick and thin) for malaria parasites; rapid malaria diagnostic test; CBC, LFTs, renal function; blood cultures; dengue/typhoid serologies",
+        "evidence": [{ "t": "05:55", "speaker": "Provider", "text": "blood smear... blood tests" }]
+      }
+    }
+  }
+}
+  
