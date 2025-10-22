@@ -96,7 +96,7 @@ export const Overview = ({ onViewPatients }: { onViewPatients?: () => void }) =>
         >
           {onViewPatients && (
             <Button
-              variant="outline"
+              variant="destructive"
               onClick={onViewPatients}
               className="px-6 py-2"
             >

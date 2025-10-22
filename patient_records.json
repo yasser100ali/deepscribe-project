@@ -53,7 +53,7 @@
   "patient_scribes": {
     "jordan_carter": {
       "encounter_id": "ENC-2025-10-20-001",
-      "timestamp": "2025-10-20T09:40:00-07:00",
+      "timestamp": "2025-10-21T09:40:00-07:00",
       "location": "Family Medicine, Mission Clinic",
       "provider": {
         "name": "Andrew Lin, MD",
@@ -685,6 +685,860 @@
           "t": "06:52",
           "speaker": "Provider",
           "text": "You're welcome. Keep that knee elevated and iced. We'll be in touch soon."
+        }
+      ]
+    },
+    "emily_chen": {
+      "encounter_id": "ENC-2025-10-21-003",
+      "timestamp": "2025-10-21T11:30:00-07:00",
+      "location": "Internal Medicine, Mission Clinic",
+      "provider": {
+        "name": "Dr. James Morrison, MD",
+        "specialty": "Internal Medicine"
+      },
+      "patient": {
+        "mrn": "EC-028451",
+        "name": "Emily Chen",
+        "dob": "1990-05-15",
+        "age": 34,
+        "sex": "F"
+      },
+      "chief_complaint": "Fever and chills for 2 weeks, occurring in cycles.",
+      "vitals": {
+        "bp": "118/76",
+        "hr_bpm": 102,
+        "rr_bpm": 18,
+        "temp_f": 103.4,
+        "spo2_pct": 97,
+        "bmi": 23.1
+      },
+      "history": {
+        "hpi": "34-year-old woman presenting with 2-week history of high fever (101\u2013104\u00b0F) occurring in cycles every 48-72 hours, accompanied by severe chills, profuse diaphoresis, and muscle/joint pain. Fever pattern is remittent. Patient reports severe fatigue, malaise, and mild abdominal discomfort. Returned from 3-week trip to Tanzania 2 weeks ago (visited Dar es Salaam and rural areas); no antimalarial prophylaxis taken. No respiratory symptoms, no diarrhea. Denies recent sick contacts. Reports insect bites during travel, particularly mosquitoes at dawn/dusk. No medical interventions or over-the-counter medications taken; symptoms began gradually after return.",
+        "pmh": [],
+        "medications_prior_to_visit": [],
+        "allergies": [
+          "No known drug allergies"
+        ],
+        "social_history": {
+          "occupation": "Travel photographer",
+          "tobacco": "Never",
+          "alcohol": "Social drinker",
+          "exercise": "Regular (yoga, hiking)",
+          "home_support": "Lives alone; no dependents"
+        },
+        "family_history": [
+          "No significant family history"
+        ]
+      },
+      "exam": {
+        "general": "Alert but appearing ill; currently febrile and diaphoretic",
+        "heent": "Icteric sclera noted; no lymphadenopathy; oropharynx clear",
+        "lungs": "Clear to auscultation bilaterally",
+        "cardiac": "Tachycardic at 102 bpm, regular rhythm, no murmurs",
+        "abdomen": "Soft, mildly tender in RUQ; hepatosplenomegaly noted (liver edge 2 cm below costal margin, spleen palpable at costal margin)",
+        "extremities": "No edema; no rash; petechiae absent",
+        "neuro": "Alert and oriented; normal motor and sensory exam"
+      },
+      "assessment": [
+        {
+          "problem": "Fever of unknown origin with cyclic pattern",
+          "icd10": "R50.9",
+          "likely_etiologies": [
+            "Malaria (P. falciparum, P. vivax, P. ovale, or P. malariae given 48-72 hour fever cycle and travel to endemic region)",
+            "Dengue fever (travel history, fever pattern, malaise)",
+            "Typhoid fever (gradual onset, malaise, abdominal tenderness, hepatosplenomegaly)",
+            "Q fever or other zoonotic infection",
+            "Tuberculosis (subacute presentation, fatigue)"
+          ],
+          "red_flags_present": false,
+          "concern": "Cyclic fever after travel to malaria-endemic area is highly concerning for malaria; hepatosplenomegaly supports tropical infection"
+        },
+        {
+          "problem": "Hepatosplenomegaly",
+          "icd10": "R16.2",
+          "context": "Consistent with malaria, dengue, typhoid, or tuberculosis"
+        },
+        {
+          "problem": "Jaundice (icterus)",
+          "icd10": "R17",
+          "context": "Suggests hemolysis or liver involvement; concerning for severe malaria with hemolytic anemia"
+        }
+      ],
+      "plan": {
+        "diagnostic_workup": [
+          "Thick and thin blood smears for malaria parasites (URGENT - repeat x3 if initial negative)",
+          "Rapid diagnostic test (RDT) for malaria antigens (P. falciparum, P. vivax)",
+          "Complete blood count with differential (assess for anemia, thrombocytopenia, leukocytosis)",
+          "Liver function tests (AST, ALT, bilirubin, albumin)",
+          "Renal function (creatinine, BUN) to assess for acute kidney injury",
+          "Blood cultures x2 (rule out bacteremia, endocarditis, typhoid)",
+          "Dengue serology (IgM/IgG); consider dengue PCR",
+          "Typhoid serology and blood culture on selective media",
+          "Lactate level (assess for severe malaria)"
+        ],
+        "empiric_treatment": [
+          "Hold antimalarials pending diagnostic confirmation; patient counseled about wait-and-see approach",
+          "Supportive care: acetaminophen for fever/myalgias; encourage fluid intake",
+          "Monitor closely for warning signs of severe malaria: altered mental status, seizures, severe anemia, renal failure"
+        ],
+        "orders_today": [
+          "STAT: Thick/thin blood smears (malaria)",
+          "STAT: Rapid malaria diagnostic test",
+          "STAT: CBC with differential, comprehensive metabolic panel, LFTs",
+          "Blood cultures x2",
+          "Dengue and typhoid serologies"
+        ],
+        "education": [
+          "Explained cyclic fever pattern and malaria risk after travel",
+          "Discussed importance of rapid diagnosis given travel history",
+          "Return precautions: severe headache, confusion, difficulty breathing, severe abdominal pain, dark urine, or seizures \u2192 ER immediately"
+        ],
+        "follow_up": [
+          {
+            "type": "Phone",
+            "when": "Same day once labs result",
+            "purpose": "Discuss diagnostic findings and start treatment if malaria confirmed"
+          },
+          {
+            "type": "In-person",
+            "when": "In 24-48 hours",
+            "purpose": "Repeat blood smears if initial negative and fever persists; reassess treatment response"
+          }
+        ],
+        "shared_decision_making": "Patient understands need for urgent labs to identify cause. Agreed not to start empiric antimalarials until confirmation given diagnostic uncertainty. Will follow up emergently if symptoms worsen."
+      },
+      "impact_on_function": {
+        "work": "Unable to work; too ill; called in sick to photography assignments",
+        "activities": "Confined to bed during fever episodes; significant malaise between cycles",
+        "daily_living": "Severe fatigue making basic self-care difficult"
+      },
+      "self_care_and_remedies": {
+        "otc_used": [
+          "Minimal; used acetaminophen once but avoided others"
+        ],
+        "home_remedies": [
+          "Rest, fluids"
+        ],
+        "perceived_benefit": "Minimal relief"
+      },
+      "exposures": {
+        "travel": "3-week trip to Tanzania (Dar es Salaam, rural Morogoro region) 2 weeks ago",
+        "mosquito_exposure": "Significant exposure to mosquitoes, particularly at dawn/dusk in rural areas; no mosquito net used consistently",
+        "prophylaxis": "No antimalarial prophylaxis taken before or during trip",
+        "food_water": "Ate local food and drinks; water source varied (some from tap, some bottled)"
+      },
+      "medication_side_effects_and_concerns": {
+        "previous_meds": "None; first hospitalization/clinical presentation",
+        "allergies_confirmed": "NKDA",
+        "antibiotic_sensitivities": "Unknown; no prior cultures"
+      },
+      "adherence_and_acceptance": {
+        "agreed_to_plan": true,
+        "declined_any_treatments": false,
+        "notes": "Patient very receptive to workup; anxious about diagnosis given travel history; understands urgency"
+      },
+      "transcript": [
+        {
+          "t": "00:00",
+          "speaker": "Provider",
+          "text": "Hi Emily, I see you've been having fevers for about 2 weeks. Tell me what's been going on."
+        },
+        {
+          "t": "00:05",
+          "speaker": "Patient",
+          "text": "Yes, it started right after I got back from Tanzania. I was there for 3 weeks, traveling around, taking photos. At first I thought it was jet lag, but then the fever started and it just won't stop."
+        },
+        {
+          "t": "00:35",
+          "speaker": "Provider",
+          "text": "Is the fever constant, or does it come and go?"
+        },
+        {
+          "t": "00:38",
+          "speaker": "Patient",
+          "text": "It comes and goes. Every couple of days I get this incredibly high fever\u2014like 103, 104\u2014and I get these violent chills and start sweating through my clothes. Then after a few hours it breaks and I feel almost normal for a while. But then it comes back."
+        },
+        {
+          "t": "01:10",
+          "speaker": "Provider",
+          "text": "Any other symptoms with the fevers?"
+        },
+        {
+          "t": "01:15",
+          "speaker": "Patient",
+          "text": "My muscles and joints ache so badly. My whole body hurts. And I'm exhausted\u2014like, I can barely get out of bed. My stomach's been bothering me a bit too, kind of achy in the upper right area."
+        },
+        {
+          "t": "01:45",
+          "speaker": "Provider",
+          "text": "Any cough, sore throat, or difficulty breathing?"
+        },
+        {
+          "t": "01:48",
+          "speaker": "Patient",
+          "text": "No, nothing like that. Just the fever, chills, body aches, and this overwhelming tiredness."
+        },
+        {
+          "t": "02:10",
+          "speaker": "Provider",
+          "text": "Where exactly did you travel in Tanzania?"
+        },
+        {
+          "t": "02:15",
+          "speaker": "Patient",
+          "text": "Mainly around Dar es Salaam for the first week, then I went inland to Morogoro region to photograph wildlife and landscapes. Smaller towns, rural areas. I was there when mosquitoes are most active\u2014dawn and dusk."
+        },
+        {
+          "t": "02:45",
+          "speaker": "Provider",
+          "text": "Did you take any antimalarial medications?"
+        },
+        {
+          "t": "02:48",
+          "speaker": "Patient",
+          "text": "No, I didn't. I didn't think to get them before the trip, and by the time I realized I should have, I was already going. I did get bitten by mosquitoes a lot, especially in the evenings. I didn't always have a mosquito net."
+        },
+        {
+          "t": "03:15",
+          "speaker": "Provider",
+          "text": "Any yellow discoloration to your skin or eyes that you've noticed?"
+        },
+        {
+          "t": "03:18",
+          "speaker": "Patient",
+          "text": "Actually, now that you mention it, my mom said my eyes looked a bit yellow yesterday. I thought maybe I was just tired."
+        },
+        {
+          "t": "03:40",
+          "speaker": "Provider",
+          "text": "Have you had any rash, spots, or bleeding?"
+        },
+        {
+          "t": "03:42",
+          "speaker": "Patient",
+          "text": "No rash, no bleeding. Just feeling really sick."
+        },
+        {
+          "t": "04:00",
+          "speaker": "Provider",
+          "text": "Let me examine you and check some things. I'm going to feel your belly."
+        },
+        {
+          "t": "05:00",
+          "speaker": "Provider",
+          "text": "Emily, I can feel your liver and spleen are enlarged, and your eyes do appear icteric\u2014yellowish. Given your travel to Tanzania, the cyclic fever pattern, and these findings, we need to rule out malaria and other tropical infections urgently."
+        },
+        {
+          "t": "05:20",
+          "speaker": "Patient",
+          "text": "Malaria? Oh my god. Is that serious?"
+        },
+        {
+          "t": "05:30",
+          "speaker": "Provider",
+          "text": "Malaria can be serious if not treated, which is why we need to diagnose it quickly. But many cases respond very well to treatment. I'm going to order blood tests right away\u2014blood smears to look for the malaria parasite under the microscope, and other tests to help us understand what's going on."
+        },
+        {
+          "t": "05:50",
+          "speaker": "Patient",
+          "text": "How quickly will we know?"
+        },
+        {
+          "t": "05:55",
+          "speaker": "Provider",
+          "text": "The blood smear can be done urgently, often within hours. We should have preliminary results today. If the first test is negative but your fever continues, we'll repeat it\u2014sometimes the parasite can be hard to find on the first try."
+        },
+        {
+          "t": "06:10",
+          "speaker": "Patient",
+          "text": "And if it is malaria, what then?"
+        },
+        {
+          "t": "06:15",
+          "speaker": "Provider",
+          "text": "We have very effective antimalarial medications. The type of medication depends on which type of malaria parasite you have, so the blood smear will help us know. Once we confirm the diagnosis, we'll start treatment, and most people recover fully."
+        },
+        {
+          "t": "06:35",
+          "speaker": "Patient",
+          "text": "Okay. I'm scared, but I'm glad I came in. What do I do in the meantime?"
+        },
+        {
+          "t": "06:40",
+          "speaker": "Provider",
+          "text": "Rest, drink plenty of fluids, and take acetaminophen for the fever and body aches. If you develop confusion, severe headache, difficulty breathing, or very dark urine, go to the ER immediately. We'll call you as soon as the results are back."
+        },
+        {
+          "t": "06:50",
+          "speaker": "Patient",
+          "text": "Thank you, doctor."
+        }
+      ]
+    },
+    "jessica_brown": {
+      "encounter_id": "ENC-2025-10-21-004",
+      "timestamp": "2025-10-21T10:00:00-07:00",
+      "location": "Internal Medicine, Mission Clinic",
+      "provider": {
+        "name": "Dr. Sarah Thompson, MD",
+        "specialty": "Internal Medicine"
+      },
+      "patient": {
+        "mrn": "JB-123456",
+        "name": "Jessica Brown",
+        "dob": "2000-01-01",
+        "age": 23,
+        "sex": "F"
+      },
+      "chief_complaint": "Anxiety and depression for 3 months, worsening.",
+      "vitals": {
+        "bp": "120/80",
+        "hr_bpm": 70,
+        "rr_bpm": 12,
+        "temp_f": 97.8,
+        "spo2_pct": 99,
+        "bmi": 20.5
+      },
+      "history": {
+        "hpi": "23-year-old woman with 3-month history of worsening anxiety and depression, with no identifiable trigger. Reports increased feelings of hopelessness, difficulty concentrating, and fatigue. No history of substance abuse, trauma, or recent stressful events. No family history of psychiatric disorders.",
+        "pmh": [],
+        "medications_prior_to_visit": [],
+        "allergies": [
+          "No known drug allergies"
+        ],
+        "social_history": {
+          "occupation": "Student",
+          "tobacco": "Never",
+          "alcohol": "Social drinker",
+          "exercise": "Occasional (walking, yoga)",
+          "home_support": "Lives with parents; no dependents"
+        },
+        "family_history": [
+          "No significant family history"
+        ]
+      },
+      "exam": {
+        "general": "Appears anxious and fatigued",
+        "heent": "Normal",
+        "lungs": "Clear to auscultation bilaterally",
+        "cardiac": "Regular rate and rhythm, no murmurs",
+        "abdomen": "Soft, no tenderness",
+        "extremities": "No edema"
+      },
+      "assessment": [
+        {
+          "problem": "Anxiety disorder, unspecified",
+          "icd10": "F40.9",
+          "likely_etiologies": [
+            "Generalized anxiety disorder",
+            "Panic disorder",
+            "Social anxiety disorder",
+            "Separation anxiety disorder",
+            "Obsessive-compulsive disorder"
+          ],
+          "red_flags_present": false
+        },
+        {
+          "problem": "Depressive disorder, unspecified",
+          "icd10": "F33.9",
+          "likely_etiologies": [
+            "Major depressive disorder, recurrent, moderate",
+            "Bipolar disorder, current episode, manic",
+            "Dysthymic disorder"
+          ],
+          "red_flags_present": false
+        }
+      ],
+      "plan": {
+        "diagnostic_workup": [
+          "Complete blood count (assess for anemia, thrombocytopenia, leukocytosis)",
+          "Liver function tests (AST, ALT, bilirubin, albumin)",
+          "Renal function (creatinine, BUN)",
+          "Thyroid function tests (TSH, T4, T3)",
+          "Vitamin D level (assess for deficiency)",
+          "Complete metabolic panel",
+          "Blood cultures x2 (rule out bacteremia, endocarditis)"
+        ],
+        "empiric_treatment": [
+          "Supportive care: acetaminophen for fever/myalgias; encourage fluid intake",
+          "Monitor closely for warning signs of severe depression: altered mental status, seizures, severe anemia, renal failure",
+          "Consider referral to psychiatry for medication management"
+        ],
+        "orders_today": [
+          "STAT: CBC with differential, comprehensive metabolic panel, LFTs",
+          "STAT: Blood cultures x2",
+          "STAT: Thyroid function tests, Vitamin D level"
+        ],
+        "education": [
+          "Explained the importance of ruling out medical causes for anxiety/depression",
+          "Discussed the need for a comprehensive workup to identify the cause",
+          "Return precautions: severe headache, confusion, difficulty breathing, severe abdominal pain, dark urine, or seizures \u2192 ER immediately"
+        ],
+        "follow_up": [
+          {
+            "type": "Phone",
+            "when": "Same day once labs result",
+            "purpose": "Discuss diagnostic findings and start treatment if severe depression confirmed"
+          },
+          {
+            "type": "In-person",
+            "when": "In 24-48 hours",
+            "purpose": "Repeat blood smears if initial negative and symptoms persist; reassess treatment response"
+          }
+        ],
+        "shared_decision_making": "Patient understands need for urgent labs to identify cause. Agreed not to start empiric antimalarials until confirmation given diagnostic uncertainty. Will follow up emergently if symptoms worsen."
+      },
+      "impact_on_function": {
+        "work": "Unable to attend classes and complete assignments; missed multiple deadlines",
+        "activities": "Difficulty concentrating and making decisions; fatigue makes daily tasks challenging",
+        "daily_living": "Severe fatigue and difficulty with self-care"
+      },
+      "self_care_and_remedies": {
+        "otc_used": [
+          "Minimal; used acetaminophen once but avoided others"
+        ],
+        "home_remedies": [
+          "Rest, fluids"
+        ],
+        "perceived_benefit": "Minimal relief"
+      },
+      "exposures": {
+        "recent_stress": "Increased academic workload and stress",
+        "social_factors": "No recent significant life changes or traumatic events"
+      },
+      "medication_side_effects_and_concerns": {
+        "previous_meds": "None; first hospitalization/clinical presentation",
+        "allergies_confirmed": "NKDA",
+        "antibiotic_sensitivities": "Unknown; no prior cultures"
+      },
+      "adherence_and_acceptance": {
+        "agreed_to_plan": true,
+        "declined_any_treatments": false,
+        "notes": "Patient very receptive to workup; anxious about diagnosis given travel history; understands urgency"
+      },
+      "transcript": [
+        {
+          "t": "00:00",
+          "speaker": "Provider",
+          "text": "Hi Jessica, I see you've been having some anxiety and depression for about 3 months. Tell me what's been going on."
+        },
+        {
+          "t": "00:05",
+          "speaker": "Patient",
+          "text": "Yes, it started right after the semester began. I was already feeling stressed from school, but then I started having these really intense anxiety attacks. I couldn't sleep, my heart was racing, and I felt like I couldn't breathe. It was terrifying."
+        },
+        {
+          "t": "00:35",
+          "speaker": "Provider",
+          "text": "How often are these attacks?"
+        },
+        {
+          "t": "00:38",
+          "speaker": "Patient",
+          "text": "Every couple of days. Sometimes they're mild, but other times they're so bad that I can't even get out of bed. I've missed multiple classes and assignments because I just couldn't function."
+        },
+        {
+          "t": "01:10",
+          "speaker": "Provider",
+          "text": "Any other symptoms?"
+        },
+        {
+          "t": "01:15",
+          "speaker": "Patient",
+          "text": "I've been feeling really tired all the time. I'm constantly exhausted. My appetite is down, and I've lost weight. I've also been having trouble concentrating on anything. I feel like my mind is constantly racing."
+        },
+        {
+          "t": "01:45",
+          "speaker": "Provider",
+          "text": "Any suicidal thoughts or plans?"
+        },
+        {
+          "t": "01:48",
+          "speaker": "Patient",
+          "text": "No, thank goodness. But I've been thinking about it a lot. I just don't see a way out of this. I feel like I'm trapped in this cycle of anxiety and depression."
+        },
+        {
+          "t": "02:10",
+          "speaker": "Provider",
+          "text": "Have you had any recent stressful events?"
+        },
+        {
+          "t": "02:15",
+          "speaker": "Patient",
+          "text": "No, nothing new. I've been feeling this way for months. I thought it was just part of being a student, but it's getting worse."
+        },
+        {
+          "t": "02:45",
+          "speaker": "Provider",
+          "text": "Are you on any regular medications?"
+        },
+        {
+          "t": "02:48",
+          "speaker": "Patient",
+          "text": "No, I'm not. I've been trying to manage it on my own, but it's getting harder. I've been thinking about seeing a psychiatrist, but I'm scared."
+        },
+        {
+          "t": "03:15",
+          "speaker": "Provider",
+          "text": "I'm going to examine you and check some things. I'm going to feel your belly."
+        },
+        {
+          "t": "04:00",
+          "speaker": "Provider",
+          "text": "Jessica, I can feel your abdomen is soft and there's no tenderness. Your blood pressure is stable. Your heart rate is a bit low, but regular. Your oxygen saturation is excellent. Given your age, the chronic nature of your symptoms, and the absence of a clear trigger, we need to rule out a serious medical condition. I'm concerned about the severity of your symptoms and the fact that you've been feeling this way for months."
+        },
+        {
+          "t": "04:20",
+          "speaker": "Patient",
+          "text": "I know. I've been to the ER before, and they said it wasn't a heart issue or anything. But I'm scared. I don't want to be on medication forever."
+        },
+        {
+          "t": "04:30",
+          "speaker": "Provider",
+          "text": "I understand your concerns. Many people with anxiety and depression can manage their symptoms with medication and therapy. I'm going to order a comprehensive workup to identify the cause and rule out any serious medical conditions. This will help us determine the best course of action."
+        },
+        {
+          "t": "04:50",
+          "speaker": "Patient",
+          "text": "Okay. I'm scared, but I want to get better."
+        },
+        {
+          "t": "05:10",
+          "speaker": "Provider",
+          "text": "I'll order the diagnostic tests today. For now, I'm going to refer you to a psychiatrist for medication management. This is a crucial step for your recovery. I'll also schedule a follow-up in a few weeks to reassess your treatment response and monitor for any side effects."
+        },
+        {
+          "t": "05:40",
+          "speaker": "Patient",
+          "text": "A psychiatrist? I've never been to one before. What will they do?"
+        },
+        {
+          "t": "05:42",
+          "speaker": "Provider",
+          "text": "They'll evaluate your symptoms, ask about your medical history, and prescribe medications if needed. They'll also provide therapy to help you learn coping strategies and manage your anxiety. This is a very common and effective treatment approach."
+        },
+        {
+          "t": "06:05",
+          "speaker": "Patient",
+          "text": "Okay, and what about my work? I'm a student. I need to be able to study."
+        },
+        {
+          "t": "06:07",
+          "speaker": "Provider",
+          "text": "You'll need to prioritize your studies, but you'll also need to take time for yourself to rest and manage your symptoms. The psychiatrist will help you find a balance. I'll call you once I have the results of your workup\u2014should be within a few days."
+        },
+        {
+          "t": "06:30",
+          "speaker": "Patient",
+          "text": "All right. What if the tests show something serious?"
+        },
+        {
+          "t": "06:32",
+          "speaker": "Provider",
+          "text": "We'll discuss all options then, including surgical consultation if needed. But let's take this step by step. I'll call you once I have the results\u2014should be within a few days."
+        },
+        {
+          "t": "06:50",
+          "speaker": "Patient",
+          "text": "Thanks, doctor. I appreciate your help."
+        },
+        {
+          "t": "06:52",
+          "speaker": "Provider",
+          "text": "You're welcome. I'll make sure to call you as soon as I have the results. Keep that in mind."
+        }
+      ]
+    },
+    "michael_lee": {
+      "encounter_id": "ENC-2025-10-21-005",
+      "timestamp": "2025-10-21T09:00:00-07:00",
+      "location": "Internal Medicine, Mission Clinic",
+      "provider": {
+        "name": "Dr. James Morrison, MD",
+        "specialty": "Internal Medicine"
+      },
+      "patient": {
+        "mrn": "ML-789012",
+        "name": "Michael Lee",
+        "dob": "1960-07-20",
+        "age": 65,
+        "sex": "M"
+      },
+      "chief_complaint": "Right knee pain and stiffness for 6 months, worsening.",
+      "vitals": {
+        "bp": "140/90",
+        "hr_bpm": 80,
+        "rr_bpm": 15,
+        "temp_f": 98.2,
+        "spo2_pct": 99,
+        "bmi": 28.5
+      },
+      "history": {
+        "hpi": "65-year-old man with 6-month history of worsening right knee pain and stiffness, with no clear onset. Reports pain in the right knee that is worse with activity and better with rest. No swelling, redness, or warmth. No fever, no joint deformity. No history of trauma or previous knee injury. No family history of arthritis. No recent weight loss or unintentional bruising.",
+        "pmh": [
+          "Osteoarthritis, left knee (2015)",
+          "Hypertension (2018)",
+          "Hyperlipidemia (2020)"
+        ],
+        "medications_prior_to_visit": [
+          "lisinopril 10 mg PO QD",
+          "atorvastatin 20 mg PO QD",
+          "ibuprofen 400 mg PO PRN pain (several times weekly)"
+        ],
+        "allergies": [
+          "No known drug allergies"
+        ],
+        "social_history": {
+          "occupation": "Retired",
+          "tobacco": "Never",
+          "alcohol": "Social drinker",
+          "exercise": "Walking (recently decreased)",
+          "home_support": "Lives alone; no dependents"
+        },
+        "family_history": [
+          "Mother osteoarthritis (knees, hips)",
+          "Father hypertension"
+        ]
+      },
+      "exam": {
+        "general": "Appears in pain, but able to walk",
+        "heent": "Normal",
+        "lungs": "Clear to auscultation bilaterally",
+        "cardiac": "Regular rate and rhythm, no murmurs",
+        "abdomen": "Soft, no tenderness",
+        "extremities": "Right knee: moderate effusion, warmth, and tenderness over medial joint line; positive McMurray's test; no ligamentous laxity; full ROM painful; left knee: chronic changes without acute swelling; bilateral feet/ankles unremarkable"
+      },
+      "assessment": [
+        {
+          "problem": "Right knee pain with effusion",
+          "icd10": "M25.561",
+          "likely_etiologies": [
+            "Medial meniscal strain or tear",
+            "Early osteoarthritic flare",
+            "Synovitis"
+          ],
+          "red_flags_present": false
+        },
+        {
+          "problem": "Essential hypertension",
+          "icd10": "I10",
+          "control": "Well-controlled on current regimen"
+        },
+        {
+          "problem": "Hyperlipidemia",
+          "icd10": "E78.5",
+          "control": "At goal on current regimen"
+        },
+        {
+          "problem": "Osteoarthritis, bilateral knees",
+          "icd10": "M17.11",
+          "severity": "Mild to moderate"
+        }
+      ],
+      "plan": {
+        "medication_changes": [
+          {
+            "continue": "lisinopril 10 mg PO QD"
+          },
+          {
+            "continue": "atorvastatin 20 mg PO QD"
+          },
+          {
+            "start": "meloxicam 15 mg PO QD x 2 weeks then reassess"
+          },
+          {
+            "start": "cyclobenzaprine 5 mg PO QHS PRN muscle tightness"
+          }
+        ],
+        "orders_today": [
+          "Right knee MRI",
+          "Basic Metabolic Panel"
+        ],
+        "conditional_orders": [
+          "Orthopedic surgery referral if MRI shows significant meniscal tear or ligamentous injury"
+        ],
+        "education": [
+          "RICE protocol: rest, ice (15 min q4-6h), compression, elevation",
+          "Activity modification: avoid stairs/squatting for 1 week; resume gradually",
+          "Physical therapy referral for strengthening and ROM",
+          "Weight management counseling if indicated",
+          "Return precautions: worsening swelling, signs of infection, or persistent locked knee"
+        ],
+        "follow_up": [
+          {
+            "type": "Phone/In-person",
+            "when": "after MRI results (3\u20135 days)",
+            "purpose": "review imaging, reassess need for surgery"
+          },
+          {
+            "type": "In-person",
+            "when": "in 2 weeks",
+            "purpose": "assess response to anti-inflammatory therapy and PT"
+          }
+        ],
+        "shared_decision_making": "Patient agrees to conservative management with imaging and PT first; open to surgery if imaging reveals significant tear and conservative measures fail."
+      },
+      "impact_on_function": {
+        "work": "Unable to do household chores or gardening; limited to walking and sitting",
+        "activities": "Pain makes it difficult to engage in hobbies or social activities; sleep mildly disrupted by discomfort when turning",
+        "daily_living": "Difficulty with mobility and self-care"
+      },
+      "self_care_and_remedies": {
+        "otc_used": [
+          "Ibuprofen 400 mg",
+          "Topical diclofenac gel"
+        ],
+        "home_remedies": [
+          "Ice packs 3\u20134 times daily",
+          "Elevation on pillow",
+          "Compression sleeve"
+        ],
+        "perceived_benefit": "Temporary relief with ice and rest; pain returns with activity"
+      },
+      "exposures": {
+        "recent_activities": "Increased gardening and yard work over past month; stepped awkwardly while carrying mulch",
+        "mechanical_factors": "Repetitive squatting and kneeling for landscaping work"
+      },
+      "medication_side_effects_and_concerns": {
+        "nsaid_use_prolonged": true,
+        "patient_concerns": "Concerned about frequent ibuprofen use; prefers to avoid long-term NSAIDs; interested in physical therapy",
+        "adherence_prior": "Adherent with chronic meds; uses NSAIDs as needed without tracking frequency"
+      },
+      "adherence_and_acceptance": {
+        "agreed_to_plan": true,
+        "declined_any_treatments": false,
+        "notes": "Patient receptive to conservative approach with PT; willing to try meloxicam for limited duration; interested in preventive strategies."
+      },
+      "transcript": [
+        {
+          "t": "00:00",
+          "speaker": "Provider",
+          "text": "Hi Michael, I see you've been having some knee trouble for about 6 months. Tell me what's been going on."
+        },
+        {
+          "t": "00:05",
+          "speaker": "Patient",
+          "text": "Yes, it started gradually. I was walking more, doing some gardening, and then one day I woke up and my right knee was really stiff and painful. It's been getting worse over time. I can't even bend it all the way."
+        },
+        {
+          "t": "00:35",
+          "speaker": "Provider",
+          "text": "Any swelling, redness, or warmth?"
+        },
+        {
+          "t": "00:38",
+          "speaker": "Patient",
+          "text": "No, no swelling, no redness, no warmth. It's just stiff and painful. I can walk, but it's really uncomfortable."
+        },
+        {
+          "t": "01:10",
+          "speaker": "Provider",
+          "text": "Any fever or joint deformity?"
+        },
+        {
+          "t": "01:15",
+          "speaker": "Patient",
+          "text": "No fever, no joint deformity. I'm just in pain all the time."
+        },
+        {
+          "t": "01:45",
+          "speaker": "Provider",
+          "text": "Any prior knee injuries or problems?"
+        },
+        {
+          "t": "01:48",
+          "speaker": "Patient",
+          "text": "No, I've never had any knee problems before. I'm 65 years old, so I thought it was just arthritis getting worse."
+        },
+        {
+          "t": "02:10",
+          "speaker": "Provider",
+          "text": "Any family history of arthritis?"
+        },
+        {
+          "t": "02:15",
+          "speaker": "Patient",
+          "text": "No, my mom and dad don't have arthritis. My brother does, but not in his knees."
+        },
+        {
+          "t": "02:45",
+          "speaker": "Provider",
+          "text": "Are you on any regular medications?"
+        },
+        {
+          "t": "02:48",
+          "speaker": "Patient",
+          "text": "Yes, lisinopril for blood pressure and atorvastatin for cholesterol. I also take ibuprofen fairly often for aches\u2014maybe several times a week, especially when I'm gardening a lot."
+        },
+        {
+          "t": "03:15",
+          "speaker": "Provider",
+          "text": "I'm going to examine your knee now and check your range of motion."
+        },
+        {
+          "t": "04:00",
+          "speaker": "Provider",
+          "text": "Michael, I can feel the swelling and some tenderness along the inside of your knee joint. Your McMurray's test is positive, which suggests possible meniscal involvement, but I need imaging to be sure. Given your age and the chronic nature of your symptoms, we need to rule out a serious medical condition."
+        },
+        {
+          "t": "04:20",
+          "speaker": "Patient",
+          "text": "I know. I've been to the ER before, and they said it wasn't a heart issue or anything. But I'm scared. I don't want to be on medication forever."
+        },
+        {
+          "t": "04:30",
+          "speaker": "Provider",
+          "text": "I understand your concerns. Many people with arthritis can manage their symptoms with medication and therapy. I'm going to order a comprehensive workup to identify the cause and rule out any serious medical conditions. This will help us determine the best course of action."
+        },
+        {
+          "t": "04:50",
+          "speaker": "Patient",
+          "text": "Okay. I'm scared, but I want to get better."
+        },
+        {
+          "t": "05:10",
+          "speaker": "Provider",
+          "text": "I'll order the diagnostic tests today. For now, I'm going to refer you to a rheumatologist for medication management. This is a crucial step for your recovery. I'll also schedule a follow-up in a few weeks to reassess your treatment response and monitor for any side effects."
+        },
+        {
+          "t": "05:40",
+          "speaker": "Patient",
+          "text": "A rheumatologist? I've never been to one before. What will they do?"
+        },
+        {
+          "t": "05:42",
+          "speaker": "Provider",
+          "text": "They'll evaluate your symptoms, ask about your medical history, and prescribe medications if needed. They'll also provide therapy to help you learn coping strategies and manage your arthritis. This is a very common and effective treatment approach."
+        },
+        {
+          "t": "06:05",
+          "speaker": "Patient",
+          "text": "Okay, and what about my work? I'm a retired person. I need to be able to do things around the house."
+        },
+        {
+          "t": "06:07",
+          "speaker": "Provider",
+          "text": "You'll need to prioritize your daily activities, but you'll also need to take time for yourself to rest and manage your symptoms. The rheumatologist will help you find a balance. I'll call you once I have the results of your workup\u2014should be within a few days."
+        },
+        {
+          "t": "06:30",
+          "speaker": "Patient",
+          "text": "All right. What if the tests show something serious?"
+        },
+        {
+          "t": "06:32",
+          "speaker": "Provider",
+          "text": "We'll discuss all options then, including surgical consultation if needed. But let's take this step by step. I'll call you once I have the results\u2014should be within a few days."
+        },
+        {
+          "t": "06:50",
+          "speaker": "Patient",
+          "text": "Thanks, doctor. I appreciate your help."
+        },
+        {
+          "t": "06:52",
+          "speaker": "Provider",
+          "text": "You're welcome. I'll make sure to call you as soon as I have the results. Keep that in mind."
         }
       ]
     },
