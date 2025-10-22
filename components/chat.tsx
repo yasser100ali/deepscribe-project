@@ -166,7 +166,7 @@ export function Chat() {
 
           <div
             ref={messagesContainerRef}
-            className="flex flex-col gap-6 flex-1 overflow-y-scroll pt-4"
+            className="flex flex-col flex-1 overflow-y-scroll pt-4"
           >
             <div className="px-4">
               {/* Show overview centered when no messages */}
