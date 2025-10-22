@@ -5,6 +5,7 @@ from fastapi.responses import StreamingResponse
 
 from .utils.prompt import ClientMessage
 from .orchestrator import stream_text
+from .patient_orchestrator import stream_patient_text
 
 app = FastAPI()
 
@@ -28,10 +29,17 @@ def sanitize_for_responses(messages: List[ClientMessage]) -> List[dict]:
 
 @app.post("/api/chat")
 async def handle_chat_data(request: Request, protocol: str = Query("data")):
-    # CRITICAL: filter out 'system'/'tool' from input
     openai_messages = sanitize_for_responses(request.messages)
 
     response = StreamingResponse(stream_text(openai_messages, protocol))
     response.headers["x-vercel-ai-data-stream"] = "v1"
+    return response
 
-    return response  # <-- no trailing comma
+@app.post("/api/patient-chat")
+async def handle_patient_chat_data(request: Request, protocol: str = Query("data")):
+    """Handle patient-side chat requests with patient-specific orchestration"""
+    openai_messages = sanitize_for_responses(request.messages)
+
+    response = StreamingResponse(stream_patient_text(openai_messages, protocol))
+    response.headers["x-vercel-ai-data-stream"] = "v1"
+    return response

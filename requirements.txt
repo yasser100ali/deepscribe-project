@@ -3,10 +3,10 @@ uvicorn[standard]
 openai
 python-dotenv
 pydantic
-openai-agents
 requests
 pypdf
 openpyxl
+openai-agents
 cuid
 
 psycopg2-binary>=2.9.9

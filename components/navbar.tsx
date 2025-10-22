@@ -45,13 +45,37 @@ export const Navbar = () => {
             </span>
           </motion.div>
 
-          {/* Action Buttons */}
+          {/* Navigation Links */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
             className="flex items-center gap-3"
           >
+            <a 
+              href="/"
+              className="no-underline"
+            >
+              <Button 
+                variant="ghost" 
+                size="sm"
+                className="border border-border hover:border-primary/50 hover:bg-accent hover:text-primary transition-all font-medium"
+              >
+                Provider Portal
+              </Button>
+            </a>
+            <a 
+              href="/patient"
+              className="no-underline"
+            >
+              <Button 
+                variant="ghost" 
+                size="sm"
+                className="border border-border hover:border-primary/50 hover:bg-accent hover:text-primary transition-all font-medium"
+              >
+                Patient Portal
+              </Button>
+            </a>
             <a 
               href="https://github.com/yasser100ali/deepscribe-project" 
               target="_blank" 

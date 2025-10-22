@@ -47,7 +47,7 @@ tools = [
             },
             "required": ["patient_id"],
         },
-    },
+    }
 ]
 
 SYSTEM_PROMPT = """
@@ -70,14 +70,12 @@ Core directives:
 
 Your goal: Produce a note that a physician could easily review and use for official documentation.
 
-You have access to two functions for patient data:
-1. get_patient_names(): Returns all patient names and their IDs. Use this FIRST when a user asks about a specific patient by name.
-2. get_patient_info(patient_id): Returns detailed patient record. Use the patient_id from get_patient_names() result.
+You have access to patient data through two functions and automatic file search:
 
-When a user mentions a patient name (like "Emily Chen" or "Jordan Carter"):
-- First call get_patient_names() to get the list of all patients
-- Find the matching patient and their patient_id in the results
-- Then call get_patient_info(patient_id="<patient_id>") to get their full medical record
+1. **get_patient_names()**: Returns all patient names and their IDs. Use this FIRST when a user asks about a specific patient by name.
+
+2. **get_patient_info(patient_id)**: Returns detailed patient record. Use the patient_id from get_patient_names() result.
+
 
 If they ask about material not related to patient records or anything medical related, tell them that you are an assistant designed specifically for patient medical data, and steer them back to the main topics.
 
@@ -110,6 +108,8 @@ def execute_function_call(function_name: str, arguments: str) -> str:
         result = get_patient_info(**args)
         return json.dumps(result)
     
+    
+    
     return json.dumps({"error": f"Unknown function: {function_name}"})
 
 
@@ -124,7 +124,9 @@ def stream_text(messages: List[dict], protocol: str = "data"):
     Yields:
         Formatted response chunks for streaming
     """
-    model_name = "gpt-4o-mini"
+
+    
+    model_name = "gpt-4.1-mini"
     input_list = messages.copy()
     
     max_iterations = 5  # Prevent infinite loops
@@ -140,7 +142,7 @@ def stream_text(messages: List[dict], protocol: str = "data"):
             model=model_name,
             instructions=SYSTEM_PROMPT,
             input=input_list,
-            tools=tools
+            tools=tools,
         ) as stream:
             for event in stream:
                 et = getattr(event, "type", None)
