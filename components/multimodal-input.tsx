@@ -31,9 +31,9 @@ const suggestedActions = [
     action: "Help me draft a medical note for a routine checkup consultation.",
   },
   {
-    title: "Medical terminology",
-    label: "explanation and usage",
-    action: "Explain common medical abbreviations used in patient charts.",
+    title: "List Patients",
+    label: "from Records",
+    action: "List the current availabe patients in the records.",
   },
   {
     title: "Treatment guidelines",

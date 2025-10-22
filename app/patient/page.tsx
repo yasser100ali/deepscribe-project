@@ -83,59 +83,106 @@ export default function PatientChatPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="flex flex-col items-center justify-center min-h-[calc(100vh-300px)]"
+                  className="flex flex-col items-center justify-center min-h-[calc(100vh-300px)] relative"
                 >
-                  <div className="max-w-2xl w-full space-y-6 px-4">
-                    <div className="text-center space-y-3">
-                      <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+                  {/* Subtle corner accents */}
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
+                    <div className="absolute top-0 left-0 w-24 h-24 border-l border-t border-white" />
+                    <div className="absolute top-0 right-0 w-24 h-24 border-r border-t border-white" />
+                    <div className="absolute bottom-0 left-0 w-24 h-24 border-l border-b border-white" />
+                    <div className="absolute bottom-0 right-0 w-24 h-24 border-r border-b border-white" />
+                  </div>
+
+                  <div className="max-w-3xl w-full space-y-8 px-4 relative z-10">
+                    {/* Header Section */}
+                    <motion.div 
+                      className="text-center space-y-4"
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      <motion.div
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-4"
+                        animate={{ 
+                          opacity: [0.7, 1, 0.7]
+                        }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                      >
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-50"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                        </span>
+                        <span className="text-xs font-mono text-white/80 uppercase tracking-widest">AI Health Assistant</span>
+                      </motion.div>
+                      
+                      <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
                         Welcome to Patient Care
                       </h1>
-                      <p className="text-lg text-muted-foreground">
-                        I'm here to help answer your health questions and gather information about your symptoms.
+                      <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+                        I&apos;m here to help answer your health questions and gather information about your symptoms in a compassionate, caring way.
                       </p>
-                    </div>
+                    </motion.div>
                     
-                    <div className="grid gap-4 md:grid-cols-2 mt-8">
+                    {/* Action Cards */}
+                    <motion.div 
+                      className="grid gap-4 md:grid-cols-2"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4 }}
+                    >
                       <motion.button
-                        whileHover={{ scale: 1.02 }}
+                        whileHover={{ scale: 1.02, y: -2 }}
                         whileTap={{ scale: 0.98 }}
-                        onClick={() => append({ role: "user", content: "I'd like to schedule an appointment" })}
-                        className="p-4 rounded-lg border border-border/50 bg-card hover:bg-accent text-left transition-colors"
+                        onClick={() => append({ role: "user", content: "I&apos;d like to schedule an appointment" })}
+                        className="group p-5 rounded-lg border border-border/50 bg-card/30 backdrop-blur-sm hover:bg-card/50 hover:border-white/20 text-left transition-all"
                       >
                         <p className="font-semibold mb-1">Schedule Appointment</p>
-                        <p className="text-sm text-muted-foreground">Book a visit with a provider</p>
+                        <p className="text-sm text-muted-foreground">Book a visit with a healthcare provider</p>
                       </motion.button>
                       
                       <motion.button
-                        whileHover={{ scale: 1.02 }}
+                        whileHover={{ scale: 1.02, y: -2 }}
                         whileTap={{ scale: 0.98 }}
-                        onClick={() => append({ role: "user", content: "I'm not feeling well and want to discuss my symptoms" })}
-                        className="p-4 rounded-lg border border-border/50 bg-card hover:bg-accent text-left transition-colors"
+                        onClick={() => append({ role: "user", content: "I&apos;m not feeling well and want to discuss my symptoms" })}
+                        className="group p-5 rounded-lg border border-border/50 bg-card/30 backdrop-blur-sm hover:bg-card/50 hover:border-white/20 text-left transition-all"
                       >
                         <p className="font-semibold mb-1">Discuss Symptoms</p>
-                        <p className="text-sm text-muted-foreground">Tell us what you're experiencing</p>
+                        <p className="text-sm text-muted-foreground">Tell us what you&apos;re experiencing</p>
                       </motion.button>
                       
                       <motion.button
-                        whileHover={{ scale: 1.02 }}
+                        whileHover={{ scale: 1.02, y: -2 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => append({ role: "user", content: "I have a question about my medications" })}
-                        className="p-4 rounded-lg border border-border/50 bg-card hover:bg-accent text-left transition-colors"
+                        className="group p-5 rounded-lg border border-border/50 bg-card/30 backdrop-blur-sm hover:bg-card/50 hover:border-white/20 text-left transition-all"
                       >
                         <p className="font-semibold mb-1">Medication Questions</p>
                         <p className="text-sm text-muted-foreground">Ask about your prescriptions</p>
                       </motion.button>
                       
                       <motion.button
-                        whileHover={{ scale: 1.02 }}
+                        whileHover={{ scale: 1.02, y: -2 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => append({ role: "user", content: "I need to update my medical history" })}
-                        className="p-4 rounded-lg border border-border/50 bg-card hover:bg-accent text-left transition-colors"
+                        className="group p-5 rounded-lg border border-border/50 bg-card/30 backdrop-blur-sm hover:bg-card/50 hover:border-white/20 text-left transition-all"
                       >
                         <p className="font-semibold mb-1">Update Information</p>
                         <p className="text-sm text-muted-foreground">Update medical history or details</p>
                       </motion.button>
-                    </div>
+                    </motion.div>
+
+                    {/* Footer hint */}
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.8 }}
+                      className="text-center pt-4"
+                    >
+                      <p className="text-xs text-muted-foreground flex items-center justify-center gap-2">
+                        <span className="inline-block w-1 h-1 rounded-full bg-white/50 animate-pulse"></span>
+                        Or type your message below to get started
+                      </p>
+                    </motion.div>
                   </div>
                 </motion.div>
               )}
