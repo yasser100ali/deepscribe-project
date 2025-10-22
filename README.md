@@ -17,6 +17,7 @@ An AI-powered healthcare documentation system built for DeepScribe, featuring a 
 - **AI-Guided Consultation**: The AI asks relevant follow-up questions similar to what a doctor or nurse would ask
 - **24/7 Availability**: Patients can get preliminary health assessments anytime
 - **Secure Data Sharing**: Patient interactions are securely stored and accessible to healthcare providers
+- Idea here is to build upon the data so the AI systems and medical professional can know more about their patients. If the patient seems to have a potentially serious condition based on their conversation, there could also be an auto-appointment or urge for them to call 911 while their healthcare provider is notified. 
 
 ### Shared Capabilities
 - **Unified Data Access**: Medical professionals can access patient-AI conversation histories for comprehensive care
@@ -50,11 +51,11 @@ An AI-powered healthcare documentation system built for DeepScribe, featuring a 
 - Node.js 18+
 - OpenAI API key
 
-## 🚀 Getting Started
+Getting Started
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/yasser100ali/deepscribe-project
    cd healthcare-ai-chat
    ```
 
