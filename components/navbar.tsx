@@ -53,7 +53,7 @@ export const Navbar = () => {
             className="flex items-center gap-3"
           >
             <a 
-              href="https://github.com/yasser100ali/ai-scribe" 
+              href="https://github.com/yasser100ali/deepscribe-project" 
               target="_blank" 
               rel="noopener noreferrer"
               className="no-underline"

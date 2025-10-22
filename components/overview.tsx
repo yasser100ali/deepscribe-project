@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
-export const Overview = () => {
+export const Overview = ({ onViewPatients }: { onViewPatients?: () => void }) => {
   return (
     <motion.div
       key="overview"
@@ -86,6 +87,23 @@ export const Overview = () => {
           and streamlined healthcare workflows.
         </motion.p>
 
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="flex gap-3 justify-center"
+        >
+          {onViewPatients && (
+            <Button
+              variant="outline"
+              onClick={onViewPatients}
+              className="px-6 py-2"
+            >
+              View Patient Records
+            </Button>
+          )}
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 10 }}
