@@ -19,7 +19,7 @@ import { ArrowUpIcon, StopIcon } from "./icons";
 import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
 
-const suggestedActions = [
+const defaultSuggestedActions = [
   {
     title: "Analyze patient symptoms",
     label: "and suggest possible diagnoses",
@@ -53,6 +53,8 @@ export function MultimodalInput({
   append,
   handleSubmit,
   className,
+  suggestedActions,
+  placeholder,
 }: {
   chatId: string;
   input: string;
@@ -72,6 +74,12 @@ export function MultimodalInput({
     chatRequestOptions?: ChatRequestOptions,
   ) => void;
   className?: string;
+  suggestedActions?: Array<{
+    title: string;
+    label: string;
+    action: string;
+  }>;
+  placeholder?: string;
 }) {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const { width } = useWindowSize();
@@ -124,11 +132,13 @@ export function MultimodalInput({
     }
   }, [handleSubmit, setLocalStorageInput, width]);
 
+  const actions = suggestedActions || defaultSuggestedActions;
+
   return (
     <div className="relative w-full flex flex-col gap-4">
       {messages.length === 0 && (
         <div className="grid sm:grid-cols-2 gap-3 w-full">
-          {suggestedActions.map((suggestedAction, index) => (
+          {actions.map((suggestedAction, index) => (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -160,7 +170,7 @@ export function MultimodalInput({
       <div className="relative rounded-2xl border border-border/60 bg-muted/40 backdrop-blur-sm p-1 shadow-lg hover:border-primary/30 focus-within:border-primary/50 transition-all">
         <Textarea
           ref={textareaRef}
-          placeholder="Ask about medical documentation, patient care, or healthcare workflows..."
+          placeholder={placeholder || "Ask about medical documentation, patient care, or healthcare workflows..."}
           value={input}
           onChange={handleInput}
           className={cn(

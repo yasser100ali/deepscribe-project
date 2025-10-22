@@ -37,6 +37,29 @@ export default function PatientChatPage() {
 
   const hasMessages = messages.length > 0;
 
+  const patientSuggestedActions = [
+    {
+      title: "Help me get started",
+      label: "I'm new here",
+      action: "I'm new here. Can you help me understand how this works and what you can help me with?",
+    },
+    {
+      title: "Describe my symptoms",
+      label: "I'm not feeling well",
+      action: "I'm not feeling well and would like to describe my symptoms to you.",
+    },
+    {
+      title: "Ask about my health",
+      label: "I have questions",
+      action: "I have some questions about my health and well-being.",
+    },
+    {
+      title: "Medical information",
+      label: "Update my details",
+      action: "I'd like to provide or update my medical information and history.",
+    },
+  ];
+
   return (
     <div className="flex h-[calc(100dvh-64px)] overflow-hidden bg-background">
       <div className="flex flex-col h-full w-full overflow-hidden">
@@ -85,14 +108,6 @@ export default function PatientChatPage() {
                   transition={{ duration: 0.6 }}
                   className="flex flex-col items-center justify-center min-h-[calc(100vh-300px)] relative"
                 >
-                  {/* Subtle corner accents */}
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
-                    <div className="absolute top-0 left-0 w-24 h-24 border-l border-t border-white" />
-                    <div className="absolute top-0 right-0 w-24 h-24 border-r border-t border-white" />
-                    <div className="absolute bottom-0 left-0 w-24 h-24 border-l border-b border-white" />
-                    <div className="absolute bottom-0 right-0 w-24 h-24 border-r border-b border-white" />
-                  </div>
-
                   <div className="max-w-3xl w-full space-y-8 px-4 relative z-10">
                     {/* Header Section */}
                     <motion.div 
@@ -120,67 +135,6 @@ export default function PatientChatPage() {
                       </h1>
                       <p className="text-lg text-muted-foreground max-w-xl mx-auto">
                         I&apos;m here to help answer your health questions and gather information about your symptoms in a compassionate, caring way.
-                      </p>
-                    </motion.div>
-                    
-                    {/* Action Cards */}
-                    <motion.div 
-                      className="grid gap-4 md:grid-cols-2"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.4 }}
-                    >
-                      <motion.button
-                        whileHover={{ scale: 1.02, y: -2 }}
-                        whileTap={{ scale: 0.98 }}
-                        onClick={() => append({ role: "user", content: "I&apos;d like to schedule an appointment" })}
-                        className="group p-5 rounded-lg border border-border/50 bg-card/30 backdrop-blur-sm hover:bg-card/50 hover:border-white/20 text-left transition-all"
-                      >
-                        <p className="font-semibold mb-1">Schedule Appointment</p>
-                        <p className="text-sm text-muted-foreground">Book a visit with a healthcare provider</p>
-                      </motion.button>
-                      
-                      <motion.button
-                        whileHover={{ scale: 1.02, y: -2 }}
-                        whileTap={{ scale: 0.98 }}
-                        onClick={() => append({ role: "user", content: "I&apos;m not feeling well and want to discuss my symptoms" })}
-                        className="group p-5 rounded-lg border border-border/50 bg-card/30 backdrop-blur-sm hover:bg-card/50 hover:border-white/20 text-left transition-all"
-                      >
-                        <p className="font-semibold mb-1">Discuss Symptoms</p>
-                        <p className="text-sm text-muted-foreground">Tell us what you&apos;re experiencing</p>
-                      </motion.button>
-                      
-                      <motion.button
-                        whileHover={{ scale: 1.02, y: -2 }}
-                        whileTap={{ scale: 0.98 }}
-                        onClick={() => append({ role: "user", content: "I have a question about my medications" })}
-                        className="group p-5 rounded-lg border border-border/50 bg-card/30 backdrop-blur-sm hover:bg-card/50 hover:border-white/20 text-left transition-all"
-                      >
-                        <p className="font-semibold mb-1">Medication Questions</p>
-                        <p className="text-sm text-muted-foreground">Ask about your prescriptions</p>
-                      </motion.button>
-                      
-                      <motion.button
-                        whileHover={{ scale: 1.02, y: -2 }}
-                        whileTap={{ scale: 0.98 }}
-                        onClick={() => append({ role: "user", content: "I need to update my medical history" })}
-                        className="group p-5 rounded-lg border border-border/50 bg-card/30 backdrop-blur-sm hover:bg-card/50 hover:border-white/20 text-left transition-all"
-                      >
-                        <p className="font-semibold mb-1">Update Information</p>
-                        <p className="text-sm text-muted-foreground">Update medical history or details</p>
-                      </motion.button>
-                    </motion.div>
-
-                    {/* Footer hint */}
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.8 }}
-                      className="text-center pt-4"
-                    >
-                      <p className="text-xs text-muted-foreground flex items-center justify-center gap-2">
-                        <span className="inline-block w-1 h-1 rounded-full bg-white/50 animate-pulse"></span>
-                        Or type your message below to get started
                       </p>
                     </motion.div>
                   </div>
@@ -218,6 +172,8 @@ export default function PatientChatPage() {
               messages={messages}
               setMessages={setMessages}
               append={append}
+              suggestedActions={patientSuggestedActions}
+              placeholder="Tell me about your symptoms, ask health questions, or let me know how I can help..."
             />
           </div>
         </div>

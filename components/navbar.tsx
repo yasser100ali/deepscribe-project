@@ -18,34 +18,22 @@ export const Navbar = () => {
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo/Initials */}
+          {/* Logo - DeepScribe on left */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="flex items-center relative"
+            className="flex items-center"
           >
-            <div 
+            <button
               onClick={handleLogoClick}
-              className="relative px-3 py-1 border border-primary/40 bg-primary/5 font-mono font-bold text-primary tracking-wider hover:border-primary/60 hover:bg-primary/10 transition-all cursor-pointer"
+              className="relative px-3 py-1.5 rounded-lg border border-primary/40 bg-primary/5 font-mono font-semibold text-foreground tracking-wider hover:border-primary/60 hover:bg-primary/10 transition-all cursor-pointer text-xs md:text-sm"
             >
-              [YA]
-            </div>
-          </motion.div>
-
-          {/* Title */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="hidden md:flex items-center gap-6"
-          >
-            <span className="text-lg font-mono font-semibold text-foreground tracking-wide">
               DeepScribe Healthcare Assistant
-            </span>
+            </button>
           </motion.div>
 
-          {/* Navigation Links */}
+          {/* Navigation Links - Right side */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -74,6 +62,18 @@ export const Navbar = () => {
                 className="border border-border hover:border-primary/50 hover:bg-accent hover:text-primary transition-all font-medium"
               >
                 Patient Portal
+              </Button>
+            </a>
+            <a 
+              href="/about"
+              className="no-underline"
+            >
+              <Button 
+                variant="ghost" 
+                size="sm"
+                className="border border-border hover:border-primary/50 hover:bg-accent hover:text-primary transition-all font-medium"
+              >
+                About & Why Hire Me
               </Button>
             </a>
             <a 
