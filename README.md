@@ -35,7 +35,6 @@ An AI-powered healthcare documentation system built for DeepScribe, featuring a 
 ### Backend
 - **Python FastAPI** - High-performance API framework
 - **OpenAI API** - Advanced language model for intelligent responses
-- **SQLite/PostgreSQL** - Database for storing patient data and conversation histories
 - **Pydantic** - Data validation and serialization
 
 ### AI & Machine Learning
@@ -56,7 +55,6 @@ Getting Started
 1. **Clone the repository**
    ```bash
    git clone https://github.com/yasser100ali/deepscribe-project
-   cd healthcare-ai-chat
    ```
 
 2. **Install dependencies**

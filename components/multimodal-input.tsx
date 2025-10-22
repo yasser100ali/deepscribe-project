@@ -21,14 +21,14 @@ import { Textarea } from "./ui/textarea";
 
 const defaultSuggestedActions = [
   {
-    title: "Analyze patient symptoms",
-    label: "and suggest possible diagnoses",
-    action: "Analyze these symptoms: fever, cough, and fatigue. What are possible diagnoses?",
+    title: "Find patients with high fevers",
+    label: "from the records",
+    action: "Find patients that have high fevers",
   },
   {
-    title: "Draft medical note",
-    label: "from patient consultation",
-    action: "Help me draft a medical note for a routine checkup consultation.",
+    title: "Help me get started",
+    label: "with this project",
+    action: "Help me get started, how could I use this project?",
   },
   {
     title: "List Patients",
@@ -36,9 +36,9 @@ const defaultSuggestedActions = [
     action: "List the current availabe patients in the records.",
   },
   {
-    title: "Treatment guidelines",
-    label: "for common conditions",
-    action: "What are the current treatment guidelines for hypertension?",
+    title: "List Tools",
+    label: "available in this system",
+    action: "Describe the tools you have here",
   },
 ];
 
