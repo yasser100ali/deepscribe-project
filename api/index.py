@@ -1,6 +1,6 @@
 import os
 import json
-from typing import List
+from typing import List, Optional, Tuple
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from fastapi import FastAPI, Query
@@ -8,6 +8,7 @@ from fastapi.responses import StreamingResponse
 from openai import OpenAI
 
 from .utils.prompt import ClientMessage  
+from .utils.get_patient_info import get_patient_info
 
 load_dotenv()
 
@@ -41,6 +42,7 @@ Your goal: Produce a note that a physician could easily review and use for offic
 If they ask about material not related to patient records or anything medical related, tell them that you are an assistant designed specifically for patient medical data, and steer them back to the main topics.
 """.strip()
 
+
 def sanitize_for_responses(messages: List[ClientMessage]) -> List[dict]:
     """
     Keep only 'user' and 'assistant' messages for Responses `input`.
@@ -62,6 +64,7 @@ def stream_text(messages: List[dict], protocol: str = "data"):
         model=model_name,
         instructions=SYSTEM_PROMPT,  # <-- the ONLY place for your system prompt
         input=messages,              # <-- user/assistant only
+        tools=[get_patient_info],      # <-- add function tool definitions
     ) as stream:
         for event in stream:
             et = getattr(event, "type", None)
