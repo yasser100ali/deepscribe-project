@@ -1,6 +1,10 @@
 import json
 import os
 from typing import Optional, Tuple, List, Dict, Any
+from openai import OpenAI
+from dotenv import load_dotenv
+
+
 
 def _load_patient_records() -> Dict[str, Any]:
     """
@@ -96,3 +100,38 @@ def get_patient_info(
             return {"error": f"Patient does not match gender filter '{gender}'"}
     
     return patient_record
+
+# ----------------
+# TOOL 3. Rag search. This tool is used when the agent wants to find a general piece of info in the client records. ex: "Find me patients with mental health issues" -> becomes increasingly important as you scale up the patient records database. 
+# Vector already initalized in testing_rag and file was already uploaded there as well. 
+load_dotenv()
+vectorStoreID = os.getenv("VECTOR_STORE_ID")
+if not vectorStoreID:
+    vectorStoreID = "vs_68f972091abc8191ac6168a7566427a1" # generated in testing_rag.py! 
+    print("[INFO] Using default VECTOR_STORE_ID:", vectorStoreID)
+
+
+client = OpenAI() 
+
+def search_records_RAG(query: str):
+    print("\nUsing RAG to search through patient records database.\n")
+    results = client.vector_stores.search(
+        vector_store_id=vectorStoreID, 
+        query=query
+    )
+    
+    # Convert the SyncPage object to a JSON-serializable format
+    search_results = []
+    for result in results.data:
+        search_results.append({
+            "content": result.content,
+            "score": getattr(result, 'score', None),
+            "metadata": getattr(result, 'metadata', {}),
+        })
+    
+    return str({
+        "query": query,
+        "results": search_results,
+        "count": len(search_results)
+    })
+

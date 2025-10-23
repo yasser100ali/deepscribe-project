@@ -1,10 +1,11 @@
 import os
 import json
+from re import search
 from typing import List, Dict
 from openai import OpenAI
 from dotenv import load_dotenv
 
-from .utils.get_patient_info import get_patient_info, get_patient_names
+from .utils.get_patient_info import get_patient_info, get_patient_names, search_records_RAG
 
 load_dotenv()
 
@@ -47,6 +48,21 @@ tools = [
             },
             "required": ["patient_id"],
         },
+    },
+    {
+        "type": "function",
+        "name": "search_records_RAG",
+        "description": "Uses RAG to search through the patient database. Use as default when the user gives you a query and wants you to search through database.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "The search query to find relevant patient records (e.g., 'Tell me about Emily')."
+                }
+            },
+            "required": ["query"]
+        }
     }
 ]
 
@@ -77,15 +93,20 @@ You have access to patient data through two functions and automatic file search:
 
 1. **get_patient_names()**: Returns all patient names and their IDs. Use this FIRST when a user asks about a specific patient by name.
 2. **get_patient_info(patient_id)**: Returns detailed patient record. Use the patient_id from get_patient_names() result.
+3. **search_records_RAG(query)**: searches through patient database using RAG. use this when the patient does not give you a particular patient to look into but wants you to find patient in the doc "Find patient that is roughly 60-70 years old" or "Find patient with depression and tell me about their symptoms" etc. Notice the search here is vague. 
 
-If they ask which tools you have describe only these 2. 
+If they ask which tools you have describe only these 3. 
 
 
 If they ask about material not related to patient records or anything medical related, tell them that you are an assistant designed specifically for patient medical data, and steer them back to the main topics.
 
 Be concise with your words and to the point. 
 
-When the user asks you to tell them about a particular patient, usually make a table for that patient and list out their information there. 
+When the user asks you to tell them about a particular patient, usually make a table for that patient and list out their information there. Cite where you are getting your info from. 
+
+When going over a patient, cite where in the transcript (which second mark) or where in the data souce if possible you found what you are referencing to. 
+
+If the user asks a question that is not in the data source given to you, simply say you do not have the information. 
 """.strip()
 
 
@@ -112,6 +133,10 @@ def execute_function_call(function_name: str, arguments: str) -> str:
         result = get_patient_info(**args)
         return json.dumps(result)
     
+    elif function_name == "search_records_RAG":
+        args = json.loads(arguments)
+        results = search_records_RAG(**args)
+        return json.dumps(results)
     
     
     return json.dumps({"error": f"Unknown function: {function_name}"})
