@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import React from "react";
 
 export const Overview = ({ onViewPatients }: { onViewPatients?: () => void }) => {
   return (
@@ -96,9 +97,8 @@ export const Overview = ({ onViewPatients }: { onViewPatients?: () => void }) =>
         >
           {onViewPatients && (
             <Button
-              variant="destructive"
               onClick={onViewPatients}
-              className="px-6 py-2"
+              className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 shadow-lg hover:shadow-cyan-500/40 transition-all border-0 rounded-lg font-semibold"
             >
               View Patient Records
             </Button>

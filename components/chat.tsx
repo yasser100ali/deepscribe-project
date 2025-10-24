@@ -152,8 +152,7 @@ export function Chat() {
                   >
                     <Button
                       size="sm"
-                      variant="outline"
-                      className="w-full h-auto px-3 py-2.5 text-xs sm:text-sm font-semibold whitespace-normal leading-snug"
+                      className="w-full h-auto px-3 py-2.5 text-xs sm:text-sm font-semibold whitespace-normal leading-snug bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 shadow-lg hover:shadow-cyan-500/40 transition-all border-0 rounded-lg"
                       onClick={handleViewPatients}
                     >
                       View Patient Records

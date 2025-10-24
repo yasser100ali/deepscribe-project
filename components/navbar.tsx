@@ -69,9 +69,8 @@ export const Navbar = () => {
               className="no-underline"
             >
               <Button 
-                variant="ghost" 
                 size="sm"
-                className="border border-border hover:border-primary/50 hover:bg-accent hover:text-primary transition-all font-medium"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 shadow-lg hover:shadow-cyan-500/40 transition-all font-semibold border-0 rounded-lg"
               >
                 About & Why Hire Me
               </Button>

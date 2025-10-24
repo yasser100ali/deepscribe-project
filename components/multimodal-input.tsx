@@ -173,8 +173,9 @@ export function MultimodalInput({
           placeholder={placeholder || "Ask about medical documentation, patient care, or healthcare workflows..."}
           value={input}
           onChange={handleInput}
+          style={{ scrollbarWidth: 'thin', scrollbarColor: '#000000 transparent' }}
           className={cn(
-            "min-h-[80px] max-h-[calc(75dvh)] overflow-hidden resize-none rounded-xl !text-base bg-transparent border-0 focus-visible:ring-0 focus-visible:ring-offset-0 pr-12",
+            "min-h-[80px] max-h-[calc(75dvh)] overflow-hidden resize-none rounded-xl !text-base bg-transparent border-0 focus-visible:ring-0 focus-visible:ring-offset-0 pr-12 [&::-webkit-scrollbar]:w-[6px] [&::-webkit-scrollbar]:h-[6px] [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-black [&::-webkit-scrollbar-thumb]:rounded-full",
             className,
           )}
           rows={3}

@@ -20,9 +20,9 @@ export default function AboutPage() {
       icon: "⚡"
     },
     {
-      title: "Healthcare Alerts",
-      description: "When potential serious symptoms are detected, the AI alerts healthcare providers in real-time, enabling them to provide timely and appropriate care.",
-      icon: "🔔"
+      title: "RAG For Patient Records",
+      description: "Patient records are stored in a vector store embedding so that the agent could retreive info from the entire patient database at once. It also utilizes a tool to get all information for specific patients, allowing both in depth and broad research.",
+      icon: "🧠"
     }
   ];
 
@@ -38,6 +38,20 @@ export default function AboutPage() {
             className="max-w-3xl"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
+              The core of this project was built in a day. This was to stay in line with the directions of the project assignment. To see further updates please navigate to
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              <a
+                href="https://ai-scribe-sooty.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-cyan-300 font-semibold underline underline-offset-4 transition-colors"
+              >
+                https://ai-scribe-sooty.vercel.app
+              </a>.
+            </p>
+            <p></p>
+            <p className="text-lg text-muted-foreground leading-relaxed mt-8 mb-4">
               Hi, I&apos;m Yasser, an AI Engineer. The moment I saw ChatGPT messaging me token by token my senior year of University, I knew that I wanted to become an AI Engineer and help build the brightest possible future for humanity. I went through textbooks and dedicated thousands of hours to teach myself machine learning, software engineering, and data science. I applied my knowledge, working day and night, discovering new ways to make awesome AI systems do useful tasks. I love the mission of DeepScribe and I see it leading a revolution in how hospitals fundamentally operate. It would be my honor to help be part of that mission!
             </p>
           </motion.div>
